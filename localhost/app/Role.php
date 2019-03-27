@@ -10,7 +10,6 @@ class Role extends Model
     protected $guarded = [];
 
     public function users(){
-        return $this->hasMany("App\User", "user_role_id", "id");
+        return $this->hasMany("App\User", "fk_users_role_id", "id");
     }
-
 }

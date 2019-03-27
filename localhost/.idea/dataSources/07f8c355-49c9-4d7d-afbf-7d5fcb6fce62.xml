@@ -975,7 +975,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="246" parent="2" name="binary_files"/>
+    <table id="246" parent="2" name="binaryfiles"/>
     <table id="247" parent="2" name="comments"/>
     <table id="248" parent="2" name="contents"/>
     <table id="249" parent="2" name="equipment_gym"/>
@@ -984,14 +984,14 @@
     <table id="252" parent="2" name="gyms"/>
     <table id="253" parent="2" name="migrations"/>
     <table id="254" parent="2" name="password_resets"/>
-    <table id="255" parent="2" name="personal_infos"/>
+    <table id="255" parent="2" name="personalinfos"/>
     <table id="256" parent="2" name="roles"/>
     <table id="257" parent="2" name="sections"/>
-    <table id="258" parent="2" name="sing_ups"/>
+    <table id="258" parent="2" name="singups"/>
     <table id="259" parent="2" name="subscriptions"/>
     <table id="260" parent="2" name="supports"/>
-    <table id="261" parent="2" name="training_shedules"/>
-    <table id="262" parent="2" name="training_times"/>
+    <table id="261" parent="2" name="trainingshedules"/>
+    <table id="262" parent="2" name="trainingtimes"/>
     <table id="263" parent="2" name="users"/>
     <column id="264" parent="246" name="id">
       <Position>1</Position>
@@ -1052,7 +1052,7 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="275" parent="247" name="fk_comment_guest_idx">
+    <index id="275" parent="247" name="fk_comments_guest_id_idx">
       <ColNames>guest_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1061,7 +1061,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="277" parent="247" name="fk_comment_guest">
+    <foreign-key id="277" parent="247" name="fk_comments_guest_id">
       <ColNames>guest_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>guests</RefTableName>
@@ -1081,12 +1081,12 @@
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="248" name="user_author_id">
+    <column id="280" parent="248" name="user_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="248" name="binary_file_id">
+    <column id="281" parent="248" name="binaryfile_id">
       <Position>4</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1101,12 +1101,12 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="284" parent="248" name="fk_articles_auth_idx">
-      <ColNames>user_author_id</ColNames>
+    <index id="284" parent="248" name="fk_contents_user_id_idx">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="285" parent="248" name="fk_articles_binary_idx">
-      <ColNames>binary_file_id</ColNames>
+    <index id="285" parent="248" name="fk_contents_binaryfile_id_idx">
+      <ColNames>binaryfile_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="286" parent="248" name="PRIMARY">
@@ -1114,18 +1114,18 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="287" parent="248" name="fk_articles_auth">
-      <ColNames>user_author_id</ColNames>
+    <foreign-key id="287" parent="248" name="fk_contents_user_id">
+      <ColNames>user_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="288" parent="248" name="fk_articles_binary">
-      <ColNames>binary_file_id</ColNames>
+    <foreign-key id="288" parent="248" name="fk_contents_binaryfile_id">
+      <ColNames>binaryfile_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>binary_files</RefTableName>
+      <RefTableName>binaryfiles</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
@@ -1162,11 +1162,11 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="295" parent="249" name="fk_gym_list_idx">
+    <index id="295" parent="249" name="fk_equipment_gym_gym_id_idx">
       <ColNames>gym_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="296" parent="249" name="fk_gym_equioment_idx">
+    <index id="296" parent="249" name="fk_equipment_gym_equioment_id_idx">
       <ColNames>equipment_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1175,7 +1175,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="298" parent="249" name="fk_gym_list">
+    <foreign-key id="298" parent="249" name="fk_equipment_gym_gym_id">
       <ColNames>gym_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>gyms</RefTableName>
@@ -1183,7 +1183,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="299" parent="249" name="fk_gym_equioment">
+    <foreign-key id="299" parent="249" name="fk_equipment_gym_equioment_id">
       <ColNames>equipment_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>equipments</RefTableName>
@@ -1260,11 +1260,11 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="313" parent="251" name="fk_quest_user_idx">
+    <index id="313" parent="251" name="fk_quests_user_id_idx">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="314" parent="251" name="fk_quest_subscription_idx">
+    <index id="314" parent="251" name="fk_quests_subscription_id_idx">
       <ColNames>subscription_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1273,7 +1273,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="316" parent="251" name="fk_quest_user">
+    <foreign-key id="316" parent="251" name="fk_quests_user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>users</RefTableName>
@@ -1281,7 +1281,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="317" parent="251" name="fk_quest_subscription">
+    <foreign-key id="317" parent="251" name="fk_quests_subscription_id">
       <ColNames>subscription_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>subscriptions</RefTableName>
@@ -1354,7 +1354,7 @@
     </column>
     <column id="329" parent="254" name="created_at">
       <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="330" parent="254" name="password_resets_email_index">
@@ -1489,7 +1489,7 @@
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="258" name="training_shedule_id">
+    <column id="355" parent="258" name="trainingshedule_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1504,12 +1504,12 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="358" parent="258" name="fk_sing_up_quest_idx">
+    <index id="358" parent="258" name="fk_singups_quest_id_idx">
       <ColNames>guest_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="359" parent="258" name="fk_sing_up_shedule_idx">
-      <ColNames>training_shedule_id</ColNames>
+    <index id="359" parent="258" name="fk_singups_trainingshedule_id_idx">
+      <ColNames>trainingshedule_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="360" parent="258" name="PRIMARY">
@@ -1517,7 +1517,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="361" parent="258" name="fk_sing_up_quest">
+    <foreign-key id="361" parent="258" name="fk_singups_quest_id">
       <ColNames>guest_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>guests</RefTableName>
@@ -1525,10 +1525,10 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="362" parent="258" name="fk_sing_up_shedule">
-      <ColNames>training_shedule_id</ColNames>
+    <foreign-key id="362" parent="258" name="fk_singups_trainingshedule_id">
+      <ColNames>trainingshedule_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>training_shedules</RefTableName>
+      <RefTableName>trainingshedules</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
@@ -1582,7 +1582,7 @@
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="260" name="user_support_id">
+    <column id="372" parent="260" name="user_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1607,12 +1607,12 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="377" parent="260" name="fk_support_quest_idx">
+    <index id="377" parent="260" name="fk_supports_quest_id_idx">
       <ColNames>guest_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="378" parent="260" name="fk_support_tech_idx">
-      <ColNames>user_support_id</ColNames>
+    <index id="378" parent="260" name="fk_supports_user_id_idx">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="379" parent="260" name="PRIMARY">
@@ -1620,7 +1620,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="380" parent="260" name="fk_support_quest">
+    <foreign-key id="380" parent="260" name="fk_supports_quest_id">
       <ColNames>guest_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>guests</RefTableName>
@@ -1628,8 +1628,8 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="381" parent="260" name="fk_support_tech">
-      <ColNames>user_support_id</ColNames>
+    <foreign-key id="381" parent="260" name="fk_supports_user_id">
+      <ColNames>user_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
@@ -1648,12 +1648,12 @@
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="261" name="training_time_id">
+    <column id="384" parent="261" name="trainingtime_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="385" parent="261" name="trainer_id">
+    <column id="385" parent="261" name="user_id">
       <Position>4</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1678,19 +1678,19 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="390" parent="261" name="fk_training_shedule_time_idx">
-      <ColNames>training_time_id</ColNames>
+    <index id="390" parent="261" name="fk_trainingshedules_trainingtime_id_idx">
+      <ColNames>trainingtime_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="391" parent="261" name="fk_training_shedule_trainer_idx">
-      <ColNames>trainer_id</ColNames>
+    <index id="391" parent="261" name="fk_trainingshedules_user_id_idx">
+      <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="392" parent="261" name="fk_training_shedule_section_idx">
+    <index id="392" parent="261" name="fk_trainingshedules_section_id_idx">
       <ColNames>section_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="393" parent="261" name="fk_training_shedule_gim_idx">
+    <index id="393" parent="261" name="fk_trainingshedules_gym_id_idx">
       <ColNames>gym_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1699,23 +1699,23 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="395" parent="261" name="fk_training_shedule_time">
-      <ColNames>training_time_id</ColNames>
+    <foreign-key id="395" parent="261" name="fk_trainingshedules_trainingtime_id">
+      <ColNames>trainingtime_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>training_times</RefTableName>
+      <RefTableName>trainingtimes</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="396" parent="261" name="fk_training_shedule_trainer">
-      <ColNames>trainer_id</ColNames>
+    <foreign-key id="396" parent="261" name="fk_trainingshedules_user_id">
+      <ColNames>user_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="397" parent="261" name="fk_training_shedule_section">
+    <foreign-key id="397" parent="261" name="fk_trainingshedules_section_id">
       <ColNames>section_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>sections</RefTableName>
@@ -1723,7 +1723,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="398" parent="261" name="fk_training_shedule_gym">
+    <foreign-key id="398" parent="261" name="fk_trainingshedules_gym_id">
       <ColNames>gym_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>gyms</RefTableName>
@@ -1784,7 +1784,7 @@
     </column>
     <column id="408" parent="263" name="email_verified_at">
       <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="409" parent="263" name="password">
@@ -1798,12 +1798,12 @@
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="263" name="user_personal_info_id">
+    <column id="411" parent="263" name="personalinfo_id">
       <Position>7</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="263" name="user_role_id">
+    <column id="412" parent="263" name="role_id">
       <Position>8</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1818,38 +1818,47 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="415" parent="263" name="users_email_unique">
+    <index id="415" parent="263" name="users_name_unique">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="416" parent="263" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="416" parent="263" name="fk_user_personal_info_idx">
-      <ColNames>user_personal_info_id</ColNames>
+    <index id="417" parent="263" name="fk_users_personalinfo_id_idx">
+      <ColNames>personalinfo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="417" parent="263" name="fk_user_role_idx">
-      <ColNames>user_role_id</ColNames>
+    <index id="418" parent="263" name="fk_users_role_id_idx">
+      <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="418" parent="263" name="PRIMARY">
+    <key id="419" parent="263" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="419" parent="263" name="users_email_unique">
+    <key id="420" parent="263" name="users_name_unique">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>users_name_unique</UnderlyingIndexName>
+    </key>
+    <key id="421" parent="263" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
-    <foreign-key id="420" parent="263" name="fk_user_personal_info">
-      <ColNames>user_personal_info_id</ColNames>
+    <foreign-key id="422" parent="263" name="fk_users_personalinfo_id">
+      <ColNames>personalinfo_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>personal_infos</RefTableName>
+      <RefTableName>personalinfos</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="421" parent="263" name="fk_user_role">
-      <ColNames>user_role_id</ColNames>
+    <foreign-key id="423" parent="263" name="fk_users_role_id">
+      <ColNames>role_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>roles</RefTableName>
       <RefColNames>id</RefColNames>

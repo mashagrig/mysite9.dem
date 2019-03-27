@@ -39,11 +39,11 @@ class User extends Authenticatable  implements MustVerifyEmail
     ];
 
     public function personal_infos(){
-        return $this->belongsTo("App\Personal_info", "user_personal_info_id", "id");
+        return $this->belongsTo("App\Personalinfo", "fk_users_personalinfo_id", "id");
     }
 
     public function role(){
-       return $this->belongsTo("App\Role", "user_role_id", "id");
+       return $this->belongsTo("App\Role", "fk_users_role_id", "id");
     }
 
 }
