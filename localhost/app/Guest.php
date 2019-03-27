@@ -19,6 +19,7 @@ class Guest extends Model
     }
 
 
+
     //1-m (мн)
     public function comments(){
         return $this->hasMany("App\Comment", "fk_comments_guest_id", "id");

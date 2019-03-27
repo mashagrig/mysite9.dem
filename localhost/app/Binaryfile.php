@@ -11,6 +11,6 @@ class Binaryfile extends Model
 
     //1-m
     public function contents(){
-        return $this->hasMany("App\Contents", "fk_contents_binaryfile_id", "id");
+        return $this->hasMany("App\Content", "fk_contents_binaryfile_id", "id");
     }
 }
