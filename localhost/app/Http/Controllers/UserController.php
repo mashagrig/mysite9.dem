@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+//    public function __construct()
+//    {
+//        //parent::__construct();
+//        $this->middleware("can:manipulate,App\User");
+//    }
+
     /**
      * Display a listing of the resource.
      *

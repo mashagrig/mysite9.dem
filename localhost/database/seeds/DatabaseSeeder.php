@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+      //  App\Role::unguard();
         // $this->call(UsersTableSeeder::class);
+        $this->call(RoleSeeder::class);
+
+      //  App\Role::reguard();
     }
 }
+//composer dump-autoload
+//php  -d memory_limit=500M artisan db:seed --class=RoleSeeder
+//php artisan db:seed --class=RoleSeeder
