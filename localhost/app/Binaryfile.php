@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Binaryfile extends Model
 {
-    //
+    protected $table = "binaryfiles";
+    protected $guarded = [];
+
+    //1-m
+    public function contents(){
+        return $this->hasMany("App\Contents", "fk_contents_binaryfile_id", "id");
+    }
 }

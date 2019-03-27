@@ -38,12 +38,33 @@ class User extends Authenticatable  implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function personal_infos(){
+    //m-1 (ед)
+    public function personalinfo(){
         return $this->belongsTo("App\Personalinfo", "fk_users_personalinfo_id", "id");
     }
 
+    //m-1 (ед)
     public function role(){
        return $this->belongsTo("App\Role", "fk_users_role_id", "id");
     }
 
+    //1-m (мн)
+    public function contents(){
+        return $this->hasMany("App\Content", "fk_contents_user_id", "id");
+    }
+
+    //1-m (мн)
+    public function guests(){
+        return $this->hasMany("App\Guest", "fk_guests_user_id", "id");
+    }
+
+    //1-m (мн)
+    public function trainingshedules(){
+        return $this->hasMany("App\Trainingshedule", "fk_trainingshedules_user_id", "id");
+    }
+
+    //1-m (мн)
+    public function supports(){
+        return $this->hasMany("App\Support", "fk_supports_user_id", "id");
+    }
 }
