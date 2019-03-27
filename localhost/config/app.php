@@ -166,7 +166,8 @@ return [
          * Package Service Providers...
          */
         Mews\Captcha\CaptchaServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         /*
          * Application Service Providers...
          */

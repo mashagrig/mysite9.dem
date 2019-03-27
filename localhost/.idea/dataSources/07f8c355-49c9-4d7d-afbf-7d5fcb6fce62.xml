@@ -978,9 +978,9 @@
     <table id="246" parent="2" name="binary_files"/>
     <table id="247" parent="2" name="comments"/>
     <table id="248" parent="2" name="contents"/>
-    <table id="249" parent="2" name="equipments"/>
-    <table id="250" parent="2" name="guests"/>
-    <table id="251" parent="2" name="gym_equipment"/>
+    <table id="249" parent="2" name="equipment_gym"/>
+    <table id="250" parent="2" name="equipments"/>
+    <table id="251" parent="2" name="guests"/>
     <table id="252" parent="2" name="gyms"/>
     <table id="253" parent="2" name="migrations"/>
     <table id="254" parent="2" name="password_resets"/>
@@ -1137,143 +1137,45 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="249" name="title">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="291" parent="249" name="count_all">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="292" parent="249" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="293" parent="249" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="294" parent="249" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="295" parent="250" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="296" parent="250" name="user_id">
+    <column id="290" parent="249" name="gym_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="250" name="subscription_id">
+    <column id="291" parent="249" name="equipment_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="250" name="first_date_subscription">
-      <Position>4</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="299" parent="250" name="last_date_subscription">
-      <Position>5</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="300" parent="250" name="created_at">
-      <Position>6</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="301" parent="250" name="updated_at">
-      <Position>7</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="302" parent="250" name="fk_quest_user_idx">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="303" parent="250" name="fk_quest_subscription_idx">
-      <ColNames>subscription_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="304" parent="250" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="305" parent="250" name="fk_quest_user">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>users</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>set-null</OnDelete>
-    </foreign-key>
-    <foreign-key id="306" parent="250" name="fk_quest_subscription">
-      <ColNames>subscription_id</ColNames>
-      <RefSchemaName>fitness1</RefSchemaName>
-      <RefTableName>subscriptions</RefTableName>
-      <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>set-null</OnDelete>
-    </foreign-key>
-    <column id="307" parent="251" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="308" parent="251" name="gym_id">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="309" parent="251" name="equipment_id">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="310" parent="251" name="count_equipment">
+    <column id="292" parent="249" name="count_equipment">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="251" name="created_at">
+    <column id="293" parent="249" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="251" name="updated_at">
+    <column id="294" parent="249" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="313" parent="251" name="fk_gym_list_idx">
+    <index id="295" parent="249" name="fk_gym_list_idx">
       <ColNames>gym_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="314" parent="251" name="fk_gym_equioment_idx">
+    <index id="296" parent="249" name="fk_gym_equioment_idx">
       <ColNames>equipment_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="315" parent="251" name="PRIMARY">
+    <key id="297" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="316" parent="251" name="fk_gym_list">
+    <foreign-key id="298" parent="249" name="fk_gym_list">
       <ColNames>gym_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>gyms</RefTableName>
@@ -1281,13 +1183,111 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="317" parent="251" name="fk_gym_equioment">
+    <foreign-key id="299" parent="249" name="fk_gym_equioment">
       <ColNames>equipment_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>equipments</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="300" parent="250" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="250" name="title">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="250" name="count_all">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="250" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="250" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="305" parent="250" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="306" parent="251" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="307" parent="251" name="user_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="251" name="subscription_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="251" name="first_date_subscription">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="251" name="last_date_subscription">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="251" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="251" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="313" parent="251" name="fk_quest_user_idx">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="314" parent="251" name="fk_quest_subscription_idx">
+      <ColNames>subscription_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="315" parent="251" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="316" parent="251" name="fk_quest_user">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>fitness1</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <foreign-key id="317" parent="251" name="fk_quest_subscription">
+      <ColNames>subscription_id</ColNames>
+      <RefSchemaName>fitness1</RefSchemaName>
+      <RefTableName>subscriptions</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>set-null</OnDelete>
     </foreign-key>
     <column id="318" parent="252" name="id">
       <Position>1</Position>
