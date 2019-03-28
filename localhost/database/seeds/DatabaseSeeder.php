@@ -11,12 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      //  App\Role::unguard();
-        // $this->call(UsersTableSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(RoleSeeder::class);
+        App\User::unguard();
 
-      //  App\Role::reguard();
+        $this->call(UserSeeder::class);
+
+
+     //  $this->call(RoleSeeder::class);
+
+        App\User::reguard();
     }
 }
 //composer dump-autoload

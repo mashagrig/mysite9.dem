@@ -15,14 +15,68 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+//$factory->define(User::class, function (Faker $faker) {
+//    return [
+//        'name' => $faker->name,
+//        'email' => $faker->unique()->safeEmail,
+//        'email_verified_at' => now(),
+//        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+//        'remember_token' => Str::random(10),
+//        'personalinfo_id' => 1,
+//        //  'role_id' => ,
+//    ];
+//});
+
+
+
+$factory->defineAs(App\User::class, 'user_admin', function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'name' => 'admin'. '-'. rand(1,10000),
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
-        'personalinfo_id' => 1,
-      //  'role_id' => ,
+      //  'personalinfo_id' => 1
+    ];
+});
+
+$factory->defineAs(App\User::class, 'user_guest', function (Faker $faker) {
+    return [
+        'name' => 'guest'. '-'. rand(1,10000),
+        'email' => $faker->unique()->safeEmail,
+        'email_verified_at' => now(),
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'remember_token' => Str::random(10),
+       // 'personalinfo_id' => 1
+    ];
+});
+$factory->defineAs(App\User::class, 'user_trainer', function (Faker $faker) {
+    return [
+        'name' => 'trainer'. '-'. rand(1,10000),
+        'email' => $faker->unique()->safeEmail,
+        'email_verified_at' => now(),
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'remember_token' => Str::random(10),
+       // 'personalinfo_id' => 1
+    ];
+});
+$factory->defineAs(App\User::class, 'user_support', function (Faker $faker) {
+    return [
+        'name' => 'support'. '-'. rand(1,10000),
+        'email' => $faker->unique()->safeEmail,
+        'email_verified_at' => now(),
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'remember_token' => Str::random(10),
+      //  'personalinfo_id' => 1
+    ];
+});
+$factory->defineAs(App\User::class, 'user_content', function (Faker $faker) {
+    return [
+        'name' => 'content'. '-'. rand(1,10000),
+        'email' => $faker->unique()->safeEmail,
+        'email_verified_at' => now(),
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'remember_token' => Str::random(10),
+       // 'personalinfo_id' => 1
     ];
 });
