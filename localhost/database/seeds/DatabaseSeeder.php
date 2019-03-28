@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         App\User::unguard();
 
+        $this->call(ContentSeeder::class);
         $this->call(UserSeeder::class);
 
 
