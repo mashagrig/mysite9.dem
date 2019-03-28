@@ -11,6 +11,6 @@ class Section extends Model
 
     //1-m (мн)
     public function trainingshedules(){
-        return $this->hasMany("App\Trainingshedule", "fk_trainingshedules_section_id", "id");
+        return $this->hasMany("App\Trainingshedule", "section_id", "id");
     }
 }

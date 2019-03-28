@@ -11,6 +11,6 @@ class Subscription extends Model
 
     //1-m (мн)
     public function guests(){
-        return $this->hasMany("App\Guest", "fk_guests_subscription_id", "id");
+        return $this->hasMany("App\Guest", "subscription_id", "id");
     }
 }

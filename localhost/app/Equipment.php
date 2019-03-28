@@ -10,7 +10,7 @@ class Equipment extends Model
     protected $guarded = [];
 
     public function gyms(){
-        return $this->belongsToMany("App\Equipment", "equipment_gym", "fk_equipment_gym_gym_id", "fk_equipment_gym_equipment_id");
+        return $this->belongsToMany("App\Equipment", "equipment_gym", "gym_id", "equipment_id");
 
         //это первая связываемая таблица, поэтому прописываем связующую таблицу, поле первой (имя второй_id), поле второй (имя первой_id)
     }

@@ -11,6 +11,6 @@ class Comment extends Model
 
     //m-1 (ед)
     public function guest(){
-        return $this->belongsTo("App\Guest", "fk_comments_guest_id", "id");
+        return $this->belongsTo("App\Guest", "guest_id", "id");
     }
 }

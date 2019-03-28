@@ -11,12 +11,12 @@ class Singup extends Model
 
     //m-1 (ед)
     public function guest(){
-        return $this->belongsTo("App\Guest", "fk_singups_guest_id", "id");
+        return $this->belongsTo("App\Guest", "guest_id", "id");
     }
 
     //m-1 (ед)
     public function trainingshedule(){
-        return $this->belongsTo("App\Trainingshedule", "fk_singups_trainingshedule_id", "id");
+        return $this->belongsTo("App\Trainingshedule", "trainingshedule_id", "id");
     }
 
 

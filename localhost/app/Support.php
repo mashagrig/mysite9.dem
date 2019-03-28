@@ -12,10 +12,10 @@ class Support extends Model
 
     //m-1 (ед)
     public function guest(){
-        return $this->belongsTo("App\Guest", "fk_supports_guest_id", "id");
+        return $this->belongsTo("App\Guest", "guest_id", "id");
     }
     //m-1 (ед)
     public function user(){
-        return $this->belongsTo("App\User", "fk_supports_user_id", "id");
+        return $this->belongsTo("App\User", "user_id", "id");
     }
 }

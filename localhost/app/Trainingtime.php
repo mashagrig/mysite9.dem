@@ -11,6 +11,6 @@ class Trainingtime extends Model
 
     //1-m (мн)
     public function trainingshedules(){
-        return $this->hasMany("App\Trainingshedule", "fk_trainingshedules_trainingtime_id", "id");
+        return $this->hasMany("App\Trainingshedule", "trainingtime_id", "id");
     }
 }

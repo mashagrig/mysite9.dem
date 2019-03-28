@@ -11,6 +11,6 @@ class Personalinfo extends Model
 
     //1-m
     public function users(){
-        return $this->hasMany("App\User", "fk_users_personalinfo_id", "id");
+        return $this->hasMany("App\User", "personalinfo_id", "id");
     }
 }

@@ -20,6 +20,6 @@ class Gym extends Model
 
     //1-m (мн)
     public function trainingshedules(){
-        return $this->hasMany("App\Trainingshedule", "fk_trainingshedules_gym_id", "id");
+        return $this->hasMany("App\Trainingshedule", "gym_id", "id");
     }
 }
