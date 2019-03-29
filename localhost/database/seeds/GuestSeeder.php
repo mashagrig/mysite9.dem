@@ -23,10 +23,17 @@ class GuestSeeder extends Seeder
             factory(\App\Subscription::class, 1)->create()->each(function ($subscr) use ($guest) {
 
                 //add $last_date -> Guest
-                $date2 = new DateTime($guest->first_date_subscription);
+                $date = new DateTime(date('Y-m-d'));
+                $r=rand(1,12);
+                $date = date_modify($date, "+{$r} month");
+
+                $last_date = clone ($date);
+                //$date2 = new DateTime($guest->first_date_subscription);
+
                 $count_month = $subscr['count_month'];
-                $last_date = date_modify($date2, "+{$count_month} month")->format('Y-m-d');
+                $last_date = date_modify($last_date, "+{$count_month} month")->format('Y-m-d');
                 $guest->update([
+                    'first_date_subscription' => $date,
                     'last_date_subscription' => $last_date,
                 ]);
                 //add subscr_id -> Guest
