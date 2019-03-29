@@ -1166,7 +1166,7 @@
       <ColNames>gym_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="296" parent="249" name="fk_equipment_gym_equioment_id_idx">
+    <index id="296" parent="249" name="fk_equipment_gym_equipment_id_idx">
       <ColNames>equipment_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1183,7 +1183,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="299" parent="249" name="fk_equipment_gym_equioment_id">
+    <foreign-key id="299" parent="249" name="fk_equipment_gym_equipment_id">
       <ColNames>equipment_id</ColNames>
       <RefSchemaName>fitness1</RefSchemaName>
       <RefTableName>equipments</RefTableName>

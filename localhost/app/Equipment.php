@@ -10,10 +10,11 @@ class Equipment extends Model
     protected $guarded = [];
 
     public function gyms(){
-        return $this->belongsToMany("App\Gym", "equipment_gym");
+      //  return $this->belongsToMany("App\Gym", "equipment_gym");
 
-       // return $this->belongsToMany("App\Gym", "equipment_gym", "gym_id", "equipment_id");
+        return $this->belongsToMany("App\Gym", "equipment_gym", "equipment_id", "gym_id");
 
-        //это первая связываемая таблица, поэтому прописываем связующую таблицу, поле первой (имя второй_id), поле второй (имя первой_id)
+        //это первая связываемая таблица, поэтому прописываем связующую таблицу, поле первой (имя второй_id), поле второй (имя первой_id) - не верно в книге
+        //это первая связываемая таблица, поэтому прописываем связующую таблицу, поле первой (первой_id), поле второй (имя имя второй_id)
     }
 }
