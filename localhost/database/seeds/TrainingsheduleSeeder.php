@@ -30,9 +30,7 @@ class TrainingsheduleSeeder extends Seeder
                  $gym->trainingshedules()->save($shedule);
              });
                 $gym->toArray();
-                var_dump($gym[0]['id']);
              $eq = factory(\App\Equipment::class, 1)->create()->toArray();
-                var_dump($eq[0]['id']);
                 DB::table('equipment_gym')->update([
                     'gym_id' => $gym[0]['id'],
                     'equipment_id' => $eq[0]['id']
