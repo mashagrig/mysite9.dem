@@ -16,7 +16,7 @@ class CreateEquipmentGymTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('gym_id')->unsigned()->nullable()->index('fk_equipment_gym_gym_id_idx');
-			$table->integer('equipment_id')->unsigned()->nullable()->index('fk_equipment_gym_equioment_id_idx');
+			$table->integer('equipment_id')->unsigned()->nullable()->index('fk_equipment_gym_equipment_id_idx');
 			$table->integer('count_equipment')->nullable();
 			$table->timestamps();
 		});

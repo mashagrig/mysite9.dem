@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+
 class ContentSeeder extends Seeder
 {
     /**
@@ -11,14 +12,13 @@ class ContentSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Content::class,  1)->make()->each(function ($u) {
+        factory(\App\Content::class, 5)->make()->each(function ($content) {
 
-        factory(\App\Binaryfile::class, 1)->create()->each(function ($ur) use ($u) {
-            $ur->contents()->save($u);
+            factory(\App\Binaryfile::class, 1)->create()->each(function ($binary) use ($content) {
+                $binary->contents()->save($content);
+            });
+            User::select("id")->where('name', 'like', "%content%")->inRandomOrder()->first()->contents()->save($content);
+
         });
-          //  User::all()->where('name', 'like', '%content-%')->first()->contents()->associate($u)->save($u);
-            User::select("id")->where('name', 'like', "%content%")->first()->contents()->save($u);
-
-    });
     }
 }

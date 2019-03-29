@@ -13,6 +13,7 @@ class Gym extends Model
     public function equipments(){
         return $this->belongsToMany("App\Equipment");
 
+
         //это вторая связываемая таблица, поэтому связующую таблицу не указываем при создании связи (первая связываемая таблица - equipments)
     }
 
