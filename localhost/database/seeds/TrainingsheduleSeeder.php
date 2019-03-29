@@ -8,7 +8,6 @@ class TrainingsheduleSeeder extends Seeder
      * Run the database seeds.
      *
      * create Trainingtime
-     * create Section
      * create EquipmentGym
      * create Gym
      * create Equipment
@@ -22,13 +21,11 @@ class TrainingsheduleSeeder extends Seeder
             factory(\App\Trainingtime::class, 1)->create()->each(function ($time) use ($shedule) {
                 $time->trainingshedules()->save($shedule);
             });
-//-----------------
+//-----------------add User
             \App\User::select("id")->where('name', 'like', "%guest%")->inRandomOrder()->first()->trainingshedules()->save($shedule);
 
-//-----------------create Section
-            factory(\App\Section::class, 1)->create()->each(function ($section) use ($shedule) {
-                $section->trainingshedules()->save($shedule);
-            });
+//-----------------add Section
+            \App\Section::select("id")->inRandomOrder()->first()->trainingshedules()->save($shedule);
 
 //----------------create EquipmentGym
             factory(\App\EquipmentGym::class, 1)->create()->each(function ($eq_gym) use ($shedule) {

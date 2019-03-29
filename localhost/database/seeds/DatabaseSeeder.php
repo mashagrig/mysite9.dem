@@ -13,10 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         App\User::unguard();
 
-        $this->call(ContentSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(GuestSeeder::class);
-        $this->call(TrainingsheduleSeeder::class);
+        $this->call(ContentSeeder::class); //create Binaryfile
+        $this->call(SectionSeeder::class); //create Section
+        $this->call(UserSeeder::class); // create Role, Personalinfo
+        $this->call(GuestSeeder::class); //create subscription, comment
+        $this->call(TrainingsheduleSeeder::class);  //create Trainingtime, Section, EquipmentGym,Gym,Equipment
         $this->call(SingupSeeder::class);
         $this->call(SupportSeeder::class);
 

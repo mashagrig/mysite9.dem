@@ -63,11 +63,5 @@ class UserSeeder extends Seeder
                 $up->users()->save($u);
             });
         });
-
-//        factory(\App\User::class, 'user_admin', 1)->create();
-//        factory(\App\User::class, 'user_guest', 1)->create();
-//        factory(\App\User::class, 'user_trainer', 1)->create();
-//        factory(\App\User::class, 'user_support', 1)->create();
-//        factory(\App\User::class, 'user_content', 1)->create();
     }
 }

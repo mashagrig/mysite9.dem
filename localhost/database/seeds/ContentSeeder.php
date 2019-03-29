@@ -14,7 +14,7 @@ class ContentSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Content::class, 5)->make()->each(function ($content) {
+        factory(\App\Content::class, 1)->make()->each(function ($content) {
 
             factory(\App\Binaryfile::class, 1)->create()->each(function ($binary) use ($content) {
                 $binary->contents()->save($content);
