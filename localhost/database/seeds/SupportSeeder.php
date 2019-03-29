@@ -12,15 +12,10 @@ class SupportSeeder extends Seeder
     public function run()
     {
         factory(\App\Support::class, 1)->create()->each(function ($support) {
-
-            //create comment!!!!!!!!
-            //-2- add traningshedule_id -> Singup (создается сиидером)
+            //-2- add Guest_id
             \App\Guest::select("id")->inRandomOrder()->first()->supports()->save($support);
-
-            //create comment!!!!!!!!
-            //-2- add traningshedule_id -> Singup (создается сиидером)
+            //-2- add User_id
             \App\User::select("id")->inRandomOrder()->first()->supports()->save($support);
-
         });
     }
 }
