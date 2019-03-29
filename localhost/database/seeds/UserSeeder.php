@@ -7,6 +7,9 @@ class UserSeeder extends Seeder
     /**
      * Run the database seeds.
      *
+     *create Role
+     *create Personalinfo
+     *
      * @return void
      */
     public function run()

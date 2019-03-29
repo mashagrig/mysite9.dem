@@ -8,6 +8,8 @@ class ContentSeeder extends Seeder
     /**
      * Run the database seeds.
      *
+     * create Binaryfile
+     *
      * @return void
      */
     public function run()
@@ -17,6 +19,7 @@ class ContentSeeder extends Seeder
             factory(\App\Binaryfile::class, 1)->create()->each(function ($binary) use ($content) {
                 $binary->contents()->save($content);
             });
+
             User::select("id")->where('name', 'like', "%content%")->inRandomOrder()->first()->contents()->save($content);
 
         });

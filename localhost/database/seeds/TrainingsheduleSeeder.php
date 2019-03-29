@@ -7,6 +7,12 @@ class TrainingsheduleSeeder extends Seeder
     /**
      * Run the database seeds.
      *
+     * create Trainingtime
+     * create Section
+     * create EquipmentGym
+     * create Gym
+     * create Equipment
+     *
      * @return void
      */
     public function run()
