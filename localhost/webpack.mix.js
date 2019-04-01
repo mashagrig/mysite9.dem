@@ -11,5 +11,26 @@ const mix = require('laravel-mix');
  |
  */
 
+
+mix.styles(
+    [
+        'resources/sass/css/fancybox/jquery.fancybox.css',
+        'resources/sass/css/animate.css',
+        'resources/sass/css/bootstrap.min.css',
+        'resources/sass/css/font-awesome.min.css',
+        'resources/sass/css/jquery-ui.css',
+        'resources/sass/css/main.css',
+        'resources/sass/css/meanmenu.min.css',
+        'resources/sass/css/normalize.css',
+        'resources/sass/css/owl.carousel.css',
+        'resources/sass/css/owl.theme.css',
+        'resources/sass/css/owl.transitions.css',
+        'resources/sass/css/responsive.css',
+        'resources/sass/css/style.css',
+    ],
+    'public/css/app.css'
+);
+
+
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');

@@ -7,6 +7,6 @@
 
 {{--<title>{{ config('app.name', 'Laravel') }}</title>--}}
 
-    <title>@yield('title', config('app.name', 'SPORT'))</title>
-    include('layouts.head_links')
+    <title>@yield('title', 'Laravel')</title>
+    @include('layouts.head_links')
     </head>

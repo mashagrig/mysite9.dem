@@ -6,7 +6,7 @@
             <!-- footer-widget start -->
             <div class="col-lg-3 col-md-3 col-sm-4">
                 <div class="footer-widget">
-                    <img src="../../img/logo/logo.png" alt="" />
+                    <img src="{{asset('img/logo/logo.png')}}" alt="" />
                     <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. .</p>
                     <div class="widget-icon">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="payment-img">
-                    <img src="img/payment.png" alt="" />
+                    <img src="{{ asset('img/payment.png') }}" alt="" />
                 </div>
             </div>
         </div>
