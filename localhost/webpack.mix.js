@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -27,10 +26,14 @@ mix.styles(
         'resources/sass/css/owl.transitions.css',
         'resources/sass/css/responsive.css',
         'resources/sass/css/style.css',
+        'resources/js/lib/rs-plugin/css/settings.css',
+        'resources/js/lib/rs-plugin/css/settings-ie8.css'
     ],
     'public/css/app.css'
 );
-
+mix.copy(['resources/sass/fonts',
+            'resources/js/lib/rs-plugin/font'
+],  'public/fonts');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');

@@ -62,6 +62,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rs-plugin/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rs-plugin/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rs-plugin/font" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rs-plugin/images" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/rs-plugin/js" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/diff" />
