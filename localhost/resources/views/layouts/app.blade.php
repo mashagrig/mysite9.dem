@@ -6,8 +6,8 @@
         @include('layouts.nav')
         <main class="py-4">@yield('content')</main>
     </div>
-    @include('layouts.footer')
-    @include('layouts.footer_links')
+    {{--@include('layouts.footer')--}}
+    {{--@include('layouts.footer_links')--}}
 </body>
 </html>
 

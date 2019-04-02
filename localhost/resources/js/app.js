@@ -6,35 +6,12 @@
  */
 
 
-require('./vendor/jquery-1.12.0.min.js');
-require('./vendor/modernizr-2.8.3.min.js');
-require('./fancybox/jquery.fancybox.pack.js');
-
- require('./lib/rs-plugin/rs.home.js');
- require('./lib/rs-plugin/js/jquery.themepunch.enablelog.js');
- require('./lib/rs-plugin/js/jquery.themepunch.revolution.min.js');
- //require('./lib/rs-plugin/js/jquery.themepunch.tools.min.js');
-
-
-require('./jquery.collapse.js');
-require('./main');
-require('./jquery.countdown.min.js');
-require('./jquery.counterup.min.js');
-require('./jquery.meanmenu.js');
-require('./jquery.mixitup.min.js');
-require('./jquery.scrollUp.min.js');
-
-//require('./bootstrap');
-require('./bootstrap3/bootstrap.min.js');
-
-require('./owl.carousel.min.js');
-require('./plugins.js');
-require('./price-slider.js');
-require('./waypoints.min.js');
-require('./wow.js');
+require('./bootstrap');
 require('./popper.min.js');
+require('./purify.min.js');
 
-window.Vue = require('vue');
+
+ window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
