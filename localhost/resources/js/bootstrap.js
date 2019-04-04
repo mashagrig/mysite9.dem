@@ -8,20 +8,25 @@ window._ = require('lodash');
  */
 
 
-try {
-    window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
 
+try {
+
+    window.$ = window.jQuery = require('jquery');
+   //require('jquery-migrate');
     require('jquery-ui');
-    require('jquery.countdown');
-    require('bootstrap');
-    require('magnific-popup');
+    window.Popper = require('popper.js').default;
     require('slick');
-    require('aos');
     require('mediaelement');
     require('purify');
     require('animate');
+    require('bootstrap');
     require('owl.carousel');
+    require('../../node_modules/jquery.stellar/jquery.stellar.js');
+    require('jquery.countdown');
+    require('magnific-popup');
+    require('bootstrap-datepicker');
+    require('aos');
+
 } catch (e) {
     console.log(e);
 }

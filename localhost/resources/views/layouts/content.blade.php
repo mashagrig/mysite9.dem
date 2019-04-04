@@ -1,12 +1,10 @@
+<!-- <div style="height: 113px;"></div> -->
+<div class="slide-one-item home-slider owl-carousel">
 
-
-
-<div class="slide-one-item home-slider owl-carousel owl-theme">
-
-    <div class="item site-blocks-cover inner-page" style="background-image: url('{{ asset("images/hero_b1_1.jpg") }}');" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page fadeIn" style="background-image: url('{{ asset("images/hero_b1_1.jpg") }}'); "  data-stellar-background-ratio="0.5">
         <!-- <div class="container"> -->
         <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 text-center" data-aos="fade">
+            <div class="col-md-7 text-center fadeIn">
                 <h1>Welcome To Crossfits</h1>
                 <span class="caption d-block text-white">Find The Healthy Way</span>
             </div>
@@ -14,10 +12,10 @@
         <!-- </div> -->
     </div>
 
-    <div class="item site-blocks-cover inner-page" style="background-image: url('{{ asset("images/hero_bg_2.jpg") }}');" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page fadeIn" style="background-image: url('{{ asset("images/hero_bg_2.jpg") }}'); "  data-stellar-background-ratio="0.5">
         <!-- <div class="container"> -->
         <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 text-center" data-aos="fade">
+            <div class="col-md-7 text-center fadeIn">
                 <h1>Optimize Your Health</h1>
                 <span class="caption d-block text-white">Effective Program</span>
             </div>
@@ -26,32 +24,7 @@
     </div>
 </div>
 
-{{--<script>--}}
-    {{--$(document).ready(function () {--}}
-            {{--let owl = $(".owl-carousel").owlCarousel({--}}
-                {{--items: 1,--}}
-                {{--slideSpeed: 500,--}}
-                {{--autoplay: true,--}}
-                {{--autoplayTimeout: 4500,--}}
-                {{--loop: true,--}}
-                {{--mouseDrag: false,--}}
-                {{--singleItem: true,--}}
-                {{--dots: true,--}}
-                {{--margin: 85,--}}
-                {{--itemElement:'li',--}}
-                {{--stageElement:'ul',--}}
-                {{--dotsClass:'slider__pager',--}}
-            {{--}).data('owlCarousel');--}}
 
-        {{--});--}}
-
-{{--</script>--}}
-
-{{--<script>--}}
-    {{--jQuery(document).ready(function(){--}}
-        {{--jQuery('.owl-carousel').owlCarousel();--}}
-{{--});--}}
-{{--</script>--}}
 
 
 @yield('content')
@@ -166,50 +139,62 @@
             <div class="row">
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-weightlifting icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-weightlifting icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Weight Lifting</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-exercise-1 icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-exercise-1 icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Walking Exercise</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-exercise-2 icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-exercise-2 icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Belly Crunches</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-weightlifting-1 icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-weightlifting-1 icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Weight Lifting Partner</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-exercise-3 icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-exercise-3 icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Exercise Rolling</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="border p-4 text-with-icon">
-                        <span class="flaticon-exercise icon display-4 mb-4 d-block text-primary"></span>
+                        <a href="#">
+                        <span class="flaticon-exercise icon display-4 mb-4 d-block"></span>
+                        </a>
                         <h2 class="h5">Lunge Plunk</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente libero</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p><a class="a-link" href="#">Learn More</a></p>
                     </div>
                 </div>
 

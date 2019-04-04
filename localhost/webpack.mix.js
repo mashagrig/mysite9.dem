@@ -9,8 +9,20 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+// mix.autoload({
+//     jquery: ['$','jQuery','jquery','global.$','global.jQuery','global.jquery'],
+//    // stellar: ['stellar']
+// });
 
-
+// var webpack = require('webpack');
+// mix.webpackConfig({
+//     plugins: [
+//         new webpack.ProvidePlugin({
+//         //    stellar : 'jquery.stellar',
+//            // Stellar : 'exports-loader?Stellar!stellar'
+//         })
+//     ]
+// });
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css/app.css');
 
@@ -56,9 +68,6 @@ mix
 
 
 mix
-//     .copy([
-//     'resources/crossfits/css/style.css'
-// ],  'public/css')
     .copy([
     'resources/crossfits/fonts/flaticon/font',
     'resources/crossfits/fonts/icomoon/fonts'

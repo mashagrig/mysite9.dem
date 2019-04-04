@@ -68,14 +68,14 @@
 
 
     <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'SPORT') }}
+            <a class="navbar-brand site-logo" href="{{ url('/') }}">
+                {{--{{ config('app.name', 'SPORT') }} --}}
+                <strong>S</strong>port
             </a>
 
-
-        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-            {{--<span class="icon-menu h3"></span>--}}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            {{--<span class="navbar-toggler-icon"></span>--}}
+            <span class="icon-menu h3"></span>
         </button>
 
 

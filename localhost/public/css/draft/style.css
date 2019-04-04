@@ -27,9 +27,55 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-    color: #fd7e14;}
+    outline: none;}
   a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+      outline: none;}
+a:focus {
+    text-decoration: none;
+      outline: none;}
+  /*-------------------------*/
+.a-link {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+    color: #fd7e14;}
+.a-link:hover {
+    text-decoration: none;
+      color: #c84f0d;}
+
+.navbar-toggler {
+    border-width: 0px;
+    outline: none;
+}
+.navbar-toggler:focus{
+    outline: none;
+}
+
+.flaticon-exercise {  color: #fd7e14;}
+.flaticon-exercise-1 {  color: #fd7e14;}
+.flaticon-exercise-2 {  color: #fd7e14;}
+.flaticon-exercise-3 {  color: #fd7e14;}
+.flaticon-weightlifting {  color: #fd7e14;}
+.flaticon-weightlifting-1 {  color: #fd7e14;}
+/*.text-primary {  color: #fd7e14;}*/
+
+.site-logo {
+    font-size: x-large;
+}
+.navbar-laravel {
+   padding-left: 50pt;
+   padding-right: 50pt;
+   padding-top: 10pt;
+   padding-bottom: 0pt;
+}
+
+
+
+
+
+/*-------------------------*/
+
 
 .text-black {
   color: #000 !important; }
@@ -99,6 +145,7 @@ a {
     .btn.btn-white.btn-outline-white:hover {
       background: #fff;
       color: #000; }
+/*-------------------------*/
 .btn.btn-outline-primary {
     border-color: #fd7e14;
     background: transparent;
@@ -113,7 +160,7 @@ a {
 .btn.btn-primary:hover {
     background: #fd7e14;
     color: #000; }
-
+/*-------------------------*/
 .bg-black {
   background: #000; }
 
@@ -508,7 +555,8 @@ a {
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+}
   .site-blocks-cover.overlay {
     position: relative; }
     .site-blocks-cover.overlay:before {
