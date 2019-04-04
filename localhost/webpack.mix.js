@@ -11,27 +11,60 @@ const mix = require('laravel-mix');
  */
 
 
-// mix.styles(
-//     [
-//         'resources/sass/css/fancybox/jquery.fancybox.css',
-//         'resources/sass/css/animate.css',
-//         'resources/sass/css/bootstrap.min.css',
-//         'resources/sass/css/font-awesome.min.css',
-//         'resources/sass/css/jquery-ui.css',
-//         'resources/sass/css/main.css',
-//         'resources/sass/css/meanmenu.min.css',
-//         'resources/sass/css/normalize.css',
-//         'resources/sass/css/owl.carousel.css',
-//         'resources/sass/css/owl.theme.css',
-//         'resources/sass/css/owl.transitions.css',
-//         'resources/sass/css/responsive.css',
-//         'resources/sass/css/style.css'
-//     ],
-//     'public/css/app.css'
-// );
-// mix.copy(['resources/sass/fonts',
-//     // 'resources/js/lib/rs-plugin/font'
-// ],  'public/fonts');
-
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css/app.css');
+
+mix
+    .styles(
+    [
+       // 'resources/crossfits/css/style.css',
+
+        'node_modules/jquery-ui/themes/base/base.css',
+
+        'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/bootstrap/dist/css/bootstrap-grid.css',
+        'node_modules/bootstrap/dist/css/bootstrap-reboot.css',
+
+        'node_modules/aos/dist/aos.css',
+
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+
+        'node_modules/mediaelement/src/css/mediaelementplayer.css',
+        'node_modules/mediaelement/src/css/mediaelementplayer-legacy.css',
+
+        'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+        'node_modules/owl.carousel/dist/assets/owl.theme.default.css',
+        'node_modules/owl.carousel/dist/assets/owl.theme.green.css',
+
+        'node_modules/animate.css/animate.min.css',
+
+        'resources/crossfits/fonts/flaticon/font/flaticon.css',
+        'resources/crossfits/fonts/icomoon/style.css',
+
+        //'resources/crossfits/css/style.css',
+        //'resources/sass/laravel.css'
+    ],
+    'public/css/app.css'
+)
+    .styles(
+    [
+        'resources/crossfits/css/style.css'
+    ],
+    'public/css/style.css'
+);
+
+
+
+mix
+//     .copy([
+//     'resources/crossfits/css/style.css'
+// ],  'public/css')
+    .copy([
+    'resources/crossfits/fonts/flaticon/font',
+    'resources/crossfits/fonts/icomoon/fonts'
+],  'public/fonts')
+
+    .copy([
+    'resources/crossfits/images'
+],  'public/images');
+

@@ -7,12 +7,24 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
+
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
+    require('jquery-ui');
+    require('jquery.countdown');
     require('bootstrap');
-} catch (e) {}
+    require('magnific-popup');
+    require('slick');
+    require('aos');
+    require('mediaelement');
+    require('purify');
+    require('animate');
+    require('owl.carousel');
+} catch (e) {
+    console.log(e);
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

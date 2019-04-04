@@ -1,13 +1,50 @@
 
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700');
+
+
+//------------------
+@import '../../node_modules/aos/src/sass/animations';
+@import '../../node_modules/aos/src/sass/core';
+@import '../../node_modules/aos/src/sass/easing';
+@import '../../node_modules/aos/src/sass/aos';
+
+@import '../../node_modules/magnific-popup/src/css/settings';
+@import '../../node_modules/magnific-popup/src/css/main';
+
+@import '../../node_modules/owl.carousel/src/scss/animate';
+@import '../../node_modules/owl.carousel/src/scss/autoheight';
+@import '../../node_modules/owl.carousel/src/scss/core';
+@import '../../node_modules/owl.carousel/src/scss/lazyload';
+@import '../../node_modules/owl.carousel/src/scss/theme.default';
+@import '../../node_modules/owl.carousel/src/scss/theme.green';
+@import '../../node_modules/owl.carousel/src/scss/theme';
+@import '../../node_modules/owl.carousel/src/scss/video';
+@import '../../node_modules/owl.carousel/src/scss/owl.carousel';
+@import '../../node_modules/owl.carousel/src/scss/owl.theme.default';
+@import '../../node_modules/owl.carousel/src/scss/owl.theme.green';
+//------------
+
+//crossfits - fonts
+@import '../crossfits/fonts/flaticon/font/flaticon';
 
 
 // Variables
 @import 'variables';
+// -------------Bootstrap-----------
+//@import '~bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/vendor/rfs";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+
+//--------crossfits------------
+@import '../crossfits/scss/site-base';
+@import '../crossfits/scss/site-blocks';
+//--------crossfits------------
 
 .navbar-laravel {
   background-color: #fff;

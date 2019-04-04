@@ -6,10 +6,7 @@
  */
 
 
-require('./bootstrap');
-require('./popper.min.js');
-require('./purify.min.js');
-
+require('./bootstrap.js');
 
  window.Vue = require('vue');
 

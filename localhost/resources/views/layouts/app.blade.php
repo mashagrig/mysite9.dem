@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')
-<body>
-    <div id="app">
+{{--<body>--}}
+<body style="background-image: url('{{ asset("images/bg.jpg") }}');">
+    {{--<div id="app">--}}
+
+        <div class="site-wrap">
+
         @include('layouts.nav')
-        <main class="py-4">@yield('content')</main>
-    </div>
-    {{--@include('layouts.footer')--}}
-    {{--@include('layouts.footer_links')--}}
+
+        <main class="py-4">
+            @include('layouts.content')
+            {{--@yield('content')--}}
+        </main>
+
+        </div>
+    {{--</div>--}}
+    @include('layouts.footer')
 </body>
 </html>
 
