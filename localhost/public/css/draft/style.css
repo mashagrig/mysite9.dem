@@ -34,7 +34,7 @@ a {
 a:focus {
     text-decoration: none;
       outline: none;}
-  /*-------------------------*/
+
 .a-link {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -58,7 +58,7 @@ a:focus {
 .flaticon-exercise-3 {  color: #fd7e14;}
 .flaticon-weightlifting {  color: #fd7e14;}
 .flaticon-weightlifting-1 {  color: #fd7e14;}
-/*.text-primary {  color: #fd7e14;}*/
+
 
 .site-logo {
     font-size: x-large;
@@ -74,7 +74,6 @@ a:focus {
 
 
 
-/*-------------------------*/
 
 
 .text-black {
@@ -145,7 +144,12 @@ a:focus {
     .btn.btn-white.btn-outline-white:hover {
       background: #fff;
       color: #000; }
-/*-------------------------*/
+
+
+
+
+
+
 .btn.btn-outline-primary {
     border-color: #fd7e14;
     background: transparent;
@@ -160,7 +164,13 @@ a:focus {
 .btn.btn-primary:hover {
     background: #fd7e14;
     color: #000; }
-/*-------------------------*/
+
+
+
+
+
+
+
 .bg-black {
   background: #000; }
 
