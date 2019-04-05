@@ -10,26 +10,26 @@ window._ = require('lodash');
 
 
 try {
-
-    window.$ = window.jQuery = require('jquery');
-   //require('jquery-migrate');
-    require('jquery-ui');
+   // window.Popper = require('../../node_modules/popper.js/dist/popper.min.js').default;
     window.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('../../node_modules/jquery/dist/jquery.min.js');
+    //require('../../node_modules/jquery-migrate/dist/jquery-migrate.min.js');
+    // require('../../node_modules/jquery-ui-css/jquery-ui.min.js');
+    // require('../../node_modules/bootstrap/dist/js/bootstrap.js');
+    // require('../../node_modules/bootstrap/dist/js/bootstrap.bundle.js');
+    // require('../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js');
+    // require('../../node_modules/owl.carousel/dist/owl.carousel.min.js');
+    // require('../../node_modules/jquery.stellar/jquery.stellar.js');
+    // require('../../node_modules/jquery.countdown/jquery.countdown.js');
+    // require('../../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js');
+    // require('../../node_modules/purify/lib/purify.js');
+    // require('../../node_modules/aos/dist/aos.js');
     require('slick');
-    require('mediaelement');
-    require('purify');
-    require('animate');
-    require('bootstrap');
-    require('owl.carousel');
-    require('../../node_modules/jquery.stellar/jquery.stellar.js');
-    require('jquery.countdown');
-    require('magnific-popup');
-    require('bootstrap-datepicker');
-    require('aos');
-
 } catch (e) {
     console.log(e);
 }
+//require('../../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js');
+// require('../../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uk.min.js');
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

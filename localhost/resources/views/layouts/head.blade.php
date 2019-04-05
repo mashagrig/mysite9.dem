@@ -29,8 +29,9 @@
 
 
     {{--<!-- Scripts -->--}}
-    <script src="{{ asset('js/app.js') }}" type="application/javascript"></script>
-    <script src="{{ asset('js/main.js') }}" type="application/javascript"></script>
+    {{--<script src="{{ asset('js/app.js') }}" type="application/javascript"></script>--}}
+    {{--<script src="{{ asset('js/main.js') }}" type="application/javascript"></script>--}}
+    {{--<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>--}}
 
 
     </head>

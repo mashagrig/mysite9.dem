@@ -63,12 +63,22 @@
 
 
 
+{{--<!-- Scripts -->--}}
+<script src="{{ asset('js/app.js') }}" type="application/javascript"></script>
 
+<script src="{{ asset('js/libs/jquery.min.js') }}"></script>
+<script src="{{ asset('js/libs/jquery-migrate.min.js') }}"></script>
+<script src="{{ asset('js/libs/jquery-ui.min.js') }}"></script>
 
+<script src="{{ asset('js/libs/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/libs/jquery.stellar.js') }}"></script>
+<script src="{{ asset('js/libs/jquery.countdown.js') }}"></script>
+<script src="{{ asset('js/libs/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/libs/bootstrap-datepicker.min.js') }}"></script>
 
-<!-- Scripts -->
-{{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
+<script src="{{ asset('js/libs/aos.js') }}"></script>
+{{--<script src="{{ asset('js/libs/purify.js') }}"></script>--}}
+{{--<script src="{{ asset('js/libs/popper.min.js') }}"></script>--}}
+<script src="{{ asset('js/libs/bootstrap.min.js') }}"></script>
 
-{{--<script>$(document).ready(function(){--}}
-        {{--$('.owl-carousel').owlCarousel();--}}
-    {{--});</script>--}}
+<script src="{{ asset('js/main.js') }}"></script>
