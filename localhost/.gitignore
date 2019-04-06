@@ -13,3 +13,7 @@ yarn-error.log
 #/_ide_helper.php
 #/.phpstorm.meta.php
 #/_ide_helper_models.php
+/public/js/libs/bootstrap.js.map
+/public/js/libs/bootstrap.min.js.map
+/public/js/libs/popper.js.map
+/public/js/libs/popper.min.js.map
