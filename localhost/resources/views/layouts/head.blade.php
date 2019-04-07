@@ -9,10 +9,6 @@
 {{--<title>{{ config('app.name', 'Laravel') }}</title>--}}
     <title>@yield('title', 'SPORT')</title>
 
-
-
-
-
     <!-- Fonts -->
     {{--<link rel="dns-prefetch" href="//fonts.gstatic.com">--}}
     {{--<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">--}}
@@ -23,15 +19,5 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{--<link href="{{ asset('css/style.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/draft/style.css') }}" rel="stylesheet">
-
-
-
-
-
-    {{--<!-- Scripts -->--}}
-    {{--<script src="{{ asset('js/app.js') }}" type="application/javascript"></script>--}}
-    {{--<script src="{{ asset('js/main.js') }}" type="application/javascript"></script>--}}
-    {{--<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>--}}
-
 
     </head>
