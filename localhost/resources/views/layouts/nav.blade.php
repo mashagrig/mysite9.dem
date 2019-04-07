@@ -24,9 +24,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-            </ul>
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
 
                 {{--------------about---------------}}
                 <li class="nav-item dropdown">
@@ -82,8 +79,14 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('shedule') }}">{{ __('Расписание') }}</a></li>
                 {{--------------contacts---------------}}
                 <li class="nav-item"><a class="nav-link" href="{{ route('contacts') }}">{{ __('Контакты') }}</a></li>
-                {{--------------about---------------}}
 
+            </ul>
+
+
+
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
 
 
                 <!-- Authentication Links -->
@@ -114,7 +117,7 @@
                     </li>
                 @endguest
             </ul>
-            </ul>
+
         </div>
     </div>
 </nav>

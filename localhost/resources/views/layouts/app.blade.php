@@ -10,8 +10,9 @@
         @include('layouts.nav')
 
         <main class="py-4">
-            @include('layouts.content')
             {{--@yield('content')--}}
+            @include('layouts.content')
+
         </main>
 
         </div>

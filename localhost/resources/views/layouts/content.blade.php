@@ -1,4 +1,8 @@
 <!-- <div style="height: 113px;"></div> -->
+
+
+
+
 <div class="slide-one-item home-slider owl-carousel">
 
     <div class="site-blocks-cover inner-page fadeIn" style="background-image: url('{{ asset("images/hero_b1_1.jpg") }}'); "  data-stellar-background-ratio="0.5">
@@ -24,9 +28,7 @@
     </div>
 </div>
 
-
-
-
+<p><br /></p>
 @yield('content')
 
 

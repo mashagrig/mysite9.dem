@@ -18,15 +18,91 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Auth::routes();
+//Auth::routes();
+\Illuminate\Support\Facades\Auth::routes(['verify' => true]);
+//создаст набор маршрутов
+
 //--------- menu -----------------
-Route::get('/register', 'HomeController@index')->name('register');
-Route::get('/logout', 'HomeController@index')->name('logout');
-Route::get('/login', 'HomeController@index')->name('login');
+
+//--------- register -----------------
+//Route::get('/login', 'HomeController@index')->name('login'); //- такой роут ставить нельзя - будет ошибка!!!
+//отображение формы аутентификации
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//POST запрос аутентификации на сайте
+Route::post('login', 'Auth\LoginController@login');
+
+Route::get('/login/success', function () {
+    return view('auth.loginSuccess');
+});
+
+//--------- register -----------------
+//Route::get('/register', 'HomeController@index')->name('register');
+//страница с формой Laravel регистрации пользователей
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//POST запрос регистрации на сайте
+Route::post('register', 'Auth\RegisterController@register');
+
+
+//--------- logout -----------------
+//POST запрос на выход из системы (логаут)
+//Route::post('logout', 'Auth\LoginController@logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+//Route::get('/logout', 'HomeController@index')->name('logout');
+
+//--------- privacy -----------------
 Route::get('/privacy', 'HomeController@index')->name('privacy');
-Route::get('/admin', 'HomeController@index')->name('admin');
-Route::get('/content', 'HomeController@index')->name('content');
-//--------- menu -----------------
+//Route::get('/admin', 'HomeController@index')->name('admin');
+//Route::get('/content', 'HomeController@index')->name('content');
+
+//--------- sendResetLinkEmail -----------------
+////POST запрос для отправки email письма пользователю для сброса пароля
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//Route::get('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+
+//ссылка для сброса пароля (можно размещать в письме)
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+
+
+//POST запрос для сброса старого и установки нового пароля
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+//страница с формой для сброса пароля
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+//--------- password - verification -----------------
+
+//просто страница с формой для верификации пароля - регает ссылку с VerifContr после всех успешно выполненных методов и действий
+Route::get('/password/verification', function () {
+    return view('auth.verifySuccess');
+});
+
+
+// запрос для верификации - регает ссылку с RegisterContr и из шаблоне регистрации!
+Route::get('verification.send', function () {
+    return view('auth.verify');
+});
+Route::get('/password/send', 'Auth\VerificationController@send')->name('verification.send');
+
+
+// запрос для верификации - регает ссылку с RegisterContr и из шаблоне регистрации!
+Route::get('verification.resend', function () {
+    return view('auth.verify');
+});
+Route::get('/password/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+//страница с формой для верификации пароля
+//Route::get('/password/verification', 'Auth\VerificationController@show');
+// запрос для верификации
+//Route::get('/password/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+
+//Route::get('/password/resend', 'Auth\VerificationController@verify');
+
+
+//--------- refresh_captcha -----------------
+
+Route::get('/register/refresh_captcha', 'Auth\RegisterController@refreshCaptcha')->name('refresh_captcha');
+
+
+
 
 //--------- menu -----------------
 Route::get('/home', 'HomeController@index')->name('home');
