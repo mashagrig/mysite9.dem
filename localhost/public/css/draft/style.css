@@ -4,8 +4,13 @@ body {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 1rem;
-  font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    /*font-family: 'Montserrat-Black', sans-serif;*/
+    font-family: 'Montserrat-Black', 'Montserrat-BlackItalic', 'Montserrat-Bold', 'Montserrat-Italic', 'Montserrat-Light', 'Montserrat-Medium', 'Montserrat-Regular', sans-serif;
+    /*font-family: 'M PLUS 1p', sans-serif;*/
+
+    /*font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;*/
+  /*font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
   background: #f4f4f4;
   background-size: cover;
   background-attachment: fixed;
@@ -44,6 +49,8 @@ a:focus {
     text-decoration: none;
       color: #c84f0d;}
 
+
+
 .navbar-toggler {
     border-width: 0px;
     outline: none;
@@ -52,26 +59,110 @@ a:focus {
     outline: none;
 }
 
+
+
+.dropdown-menu{
+    background-color: #000;
+}
+.dropdown-item{
+    color: #fff;
+    background-color: #000;
+    text-transform: none;
+}
+.dropdown-item:hover{
+    color: #fd7e14;
+    background-color: #000;
+}
+
+
+.site-logo {
+    font-size: x-large;
+}
+
+
+
+.nav-link{
+    text-transform: uppercase;
+}
+/*a.nav-link:hover{*/
+    /*color: #fd7e14;*/
+    /*font-weight: 600;*/
+/*}*/
+/*a.nav-link:active{*/
+    /*color: #fd7e14;*/
+/*}*/
+/*a.nav-link:focus{*/
+    /*color: #fd7e14;*/
+/*}*/
+
+
+.caret:active{
+    color: #fd7e14;
+}
+.caret:focus{
+    color: #fd7e14;
+    font-weight: 700;
+}
+.caret:hover{
+    color: #fd7e14;
+}
+
+
+
+.navbar-laravel {
+   padding-left: 30pt;
+   padding-right: 30pt;
+   padding-top: 0pt;
+   padding-bottom: 0pt;
+}
+
+
+
+
+.top-line{
+    padding-top: 10pt;
+    padding-right: 50pt;
+    font-size: small;
+}
+.top-register{
+    padding-left: 10pt;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: small;
+}
+a.top-register{
+    padding-left: 10pt;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: small;
+}
+a.top-register:hover{
+    padding-left: 10pt;
+    color: #fd7e14;
+    text-decoration-line: underline;
+}
+
+a.top-register:active{
+    padding-left: 10pt;
+    color: #fd7e14;
+}
+
+
+.orange {  color: #fd7e14;}
+a.orange:hover {
+    color: #fd7e14;
+}
+.card {  border-color: #fd7e14;}
+
+
+
+
+
+
 .flaticon-exercise {  color: #fd7e14;}
 .flaticon-exercise-1 {  color: #fd7e14;}
 .flaticon-exercise-2 {  color: #fd7e14;}
 .flaticon-exercise-3 {  color: #fd7e14;}
 .flaticon-weightlifting {  color: #fd7e14;}
 .flaticon-weightlifting-1 {  color: #fd7e14;}
-
-
-.site-logo {
-    font-size: x-large;
-}
-.navbar-laravel {
-   padding-left: 50pt;
-   padding-right: 50pt;
-   padding-top: 10pt;
-   padding-bottom: 0pt;
-}
-
-
-
 
 
 

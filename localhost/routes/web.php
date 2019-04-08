@@ -15,7 +15,7 @@
 //    return view('welcome');
 //});
 Route::get('/', function () {
-    return view('layouts.app');
+    return view('welcome');
 });
 
 //Auth::routes();
@@ -105,7 +105,10 @@ Route::get('/register/refresh_captcha', 'Auth\RegisterController@refreshCaptcha'
 
 
 //--------- menu -----------------
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return view('home');
+});
+//Route::get('/home', 'HomeController@index')->name('home');
 //--------- about -----------------
 Route::get('/about', 'HomeController@index')->name('about');
 Route::get('/photo', 'HomeController@index')->name('photo');
@@ -130,7 +133,7 @@ Route::get('/cards_three_month', 'HomeController@index')->name('cards_three_mont
 Route::get('/cards_one_month', 'HomeController@index')->name('cards_one_month');
 Route::get('/cards_personal', 'HomeController@index')->name('cards_personal');
 //--------- trainers -----------------
-Route::get('/trainers', 'HomeController@index')->name('trainers');
+Route::get('/trainers', 'TrainerController@index')->name('trainers');
 //--------- shedule -----------------
 Route::get('/shedule', 'HomeController@index')->name('shedule');
 //--------- contacts -----------------

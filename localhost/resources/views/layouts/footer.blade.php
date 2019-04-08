@@ -52,7 +52,7 @@
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
                 <small>
-                    &copy; <script>document.write(new Date().getFullYear());</script> Все права защищены | Дизайн разработан <i class="icon-heart text-danger" aria-hidden="true"></i>  <a href="#" >Григорьевой Марией</a>
+                    &copy; <script>document.write(new Date().getFullYear());</script> Все права защищены <i class="icon-heart text-danger" aria-hidden="true"></i>  <a href="#" >Григорьева Мария</a>
                 </small>
             </div>
         </div>
