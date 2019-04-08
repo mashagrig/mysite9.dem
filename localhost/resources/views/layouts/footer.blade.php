@@ -78,5 +78,6 @@
 {{--<script src="{{ asset('js/libs/purify.js') }}"></script>--}}
 {{--<script src="{{ asset('js/libs/popper.min.js') }}"></script>--}}
 <script src="{{ asset('js/libs/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/libs/scrollup.js') }}"></script>
 
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/draft/main.js') }}"></script>
