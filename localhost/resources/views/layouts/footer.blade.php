@@ -13,30 +13,30 @@
                     <div class="col-md-6">
                         <h3 class="footer-heading mb-4 text-white">Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('home') }}">{{ __('Главная') }}</a></li>
-                            <li><a href="{{ route('about') }}">{{ __('О нас') }}</a></li>
-                            <li><a href="{{ route('trainers') }}">{{ __('Наши тренеры') }}</a></li>
-                            <li><a href="{{ route('news') }}">{{ __('Новости') }}</a></li>
+                            <li><a href="{{ route('actions') }}">{{ __('Акции') }}</a></li>
+                            <li><a href="{{ route('cards') }}">{{ __('Клубные карты') }}</a></li>
+                            <li><a href="{{ route('trainers') }}">{{ __('Тренеры') }}</a></li>
+                            <li><a href="{{ route('shedule') }}">{{ __('Расписание') }}</a></li>
+                            <li><a href="{{ route('actions') }}">{{ __('Акции') }}</a></li>
                             <li><a href="{{ route('contacts') }}">{{ __('Контакты') }}</a></li>
-                            <li><a href="{{ route('clubs') }}">{{ __('Клубы') }}</a></li>
-                            <li><a href="{{ route('privacy') }}">{{ __('Личный кабинет') }}</a></li>
+
+                            <li><a href="{{ route('login') }}">{{ __('Личный кабинет') }}</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h3 class="footer-heading mb-4 text-white">Программы</h3>
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('body_building') }}">{{ __('Боди билдинг') }}</a></li>
                             <li><a href="{{ route('morning_programs') }}">{{ __('Утренние программы') }}</a></li>
+                            <li><a href="{{ route('body_building') }}">{{ __('Боди билдинг') }}</a></li>
                             <li><a href="{{ route('stretching') }}">{{ __('Стретчинг') }}</a></li>
                             <li><a href="{{ route('fitness') }}">{{ __('Фитнес') }}</a></li>
                             <li><a href="{{ route('yoga') }}">{{ __('Йога') }}</a></li>
                             <li><a href="{{ route('pilates') }}">{{ __('Пилатес') }}</a></li>
+                            <li><a href="{{ route('child_programs') }}">{{ __('Детские программы') }}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-
             <div class="col-md-2">
                 <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Мы в сетях</h3></div>
                 <div class="col-md-12">
@@ -61,7 +61,7 @@
 
 
 
-{{--<!-- Scripts -->--}}
+{{--<!------------------- Scripts --------------------->----------}}
 <script src="{{ asset('js/app.js') }}" type="application/javascript"></script>
 
 <script src="{{ asset('js/libs/jquery.min.js') }}"></script>

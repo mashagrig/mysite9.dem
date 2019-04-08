@@ -37,17 +37,7 @@
                     </div>
                 </li>
                 {{--<li class="nav-item"><a class="nav-link" href="{{ route('about') }}">{{ __('О клубе') }}</a></li> --}}
-                {{--------------clubs---------------}}
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Клубы<span class="caret"></span></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('clubs_kuskaya') }}">{{ __('Курская') }}</a>
-                        <a class="dropdown-item" href="{{ route('clubs_paveletskaya') }}">{{ __('Павелецкая') }}</a>
-                        <a class="dropdown-item" href="{{ route('clubs_tverskaya') }}">{{ __('Тверская') }}</a>
-                        <a class="dropdown-item" href="{{ route('clubs_kievskaya') }}">{{ __('Киевская') }}</a>
-                    </div>
-                </li>
-                {{--<li class="nav-item"><a class="nav-link" href="{{ route('clubs') }}">{{ __('Клубы') }}</a></li>--}}
+
                 {{--------------programs---------------}}
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Программы<span class="caret"></span></a>

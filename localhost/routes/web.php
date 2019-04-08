@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 //--------- menu -----------------
 
-//--------- register -----------------
+//--------- login -----------------
 //Route::get('/login', 'HomeController@index')->name('login'); //- такой роут ставить нельзя - будет ошибка!!!
 //отображение формы аутентификации
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -50,7 +50,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 //Route::get('/logout', 'HomeController@index')->name('logout');
 
-//--------- privacy -----------------
+//--------- privacy????? -----------------
 Route::get('/privacy', 'HomeController@index')->name('privacy');
 //Route::get('/admin', 'HomeController@index')->name('admin');
 //Route::get('/content', 'HomeController@index')->name('content');
@@ -113,12 +113,7 @@ Route::get('/actions', 'HomeController@index')->name('actions');
 Route::get('/news', 'HomeController@index')->name('news');
 Route::get('/partners', 'HomeController@index')->name('partners');
 Route::get('/comments', 'HomeController@index')->name('comments');
-//--------- clubs -----------------
-Route::get('/clubs', 'HomeController@index')->name('clubs');
-Route::get('/clubs_kuskaya', 'HomeController@index')->name('clubs_kuskaya');
-Route::get('/clubs_paveletskaya', 'HomeController@index')->name('clubs_paveletskaya');
-Route::get('/clubs_tverskaya', 'HomeController@index')->name('clubs_tverskaya');
-Route::get('/clubs_kievskaya', 'HomeController@index')->name('clubs_kievskaya');
+
 //--------- programs -----------------
 Route::get('/morning_programs', 'HomeController@index')->name('morning_programs');
 Route::get('/body_building', 'HomeController@index')->name('body_building');
