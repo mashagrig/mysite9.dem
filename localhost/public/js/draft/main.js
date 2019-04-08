@@ -370,9 +370,10 @@ jQuery(document).ready(function($) {
     // :: 4.0 ScrollUp Active Code
     if ($.fn.scrollUp) {
         $(window).scrollUp({
-            scrollSpeed: 500,
+            scrollSpeed: 250,
             // scrollText: '<i class="fa fa-angle-up"></i>'
-            scrollText: '<span class="icon-keyboard_arrow_up"></span>'
+           // scrollText: '<span class="icon-keyboard_arrow_up"></span>'
+            scrollText: '<span class="icon-arrow_upward"></span>'
         });
     }
 

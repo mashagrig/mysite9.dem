@@ -43,28 +43,28 @@ const mix = require('laravel-mix');
 //         'resources/crossfits/images'
 //     ],  'public/images');
 //
-// mix.copy([
-//     // 'node_modules/popper.js/dist/popper.js',
-//     // 'node_modules/popper.js/dist/popper.js.map',
-//     // 'node_modules/popper.js/dist/popper.min.js.map',
-//     // 'node_modules/jquery/dist/jquery.js',
-//     // 'node_modules/jquery/dist/jquery.min.map',
-//     // 'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
-//     // 'node_modules/jquery-ui-css/jquery-ui.min.js',
-//     // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-//     // 'node_modules/bootstrap/dist/js/bootstrap.js.map',
-//     // 'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
-//     // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-//     // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-//     // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
-//     // 'node_modules/jquery.stellar/jquery.stellar.js',
-//     // 'node_modules/jquery.countdown/jquery.countdown.js',
-//     // 'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-//     // 'node_modules/purify/lib/purify.js',
-//     // 'node_modules/aos/dist/aos.js',
-//    // 'node_modules/scrollup/index.js'
-//
-// ], 'public/js/libs');
+mix.scripts([
+    'node_modules/popper.js/dist/popper.js',
+    'node_modules/popper.js/dist/popper.js.map',
+    'node_modules/popper.js/dist/popper.min.js.map',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/jquery/dist/jquery.min.map',
+    'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+    'node_modules/jquery-ui-css/jquery-ui.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js.map',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'node_modules/owl.carousel/dist/owl.carousel.min.js',
+    'node_modules/jquery.stellar/jquery.stellar.js',
+    'node_modules/jquery.countdown/jquery.countdown.js',
+    'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+    'node_modules/purify/lib/purify.js',
+    'node_modules/aos/dist/aos.js',
+   'resources/js/scrollup.js'
+
+], 'public/js/plugins.js');
 
 
 mix

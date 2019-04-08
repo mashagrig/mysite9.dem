@@ -3,7 +3,8 @@ body {
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
-  font-size: 1rem;
+  /*font-size: 1rem;*/
+  font-size: 0.9rem;
 
     /*font-family: 'Montserrat-Black', sans-serif;*/
     font-family: 'Montserrat-Black', 'Montserrat-BlackItalic', 'Montserrat-Bold', 'Montserrat-Italic', 'Montserrat-Light', 'Montserrat-Medium', 'Montserrat-Regular', sans-serif;
@@ -44,9 +45,16 @@ a:focus {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-    color: #fd7e14;}
-.a-link:hover {
+    color: #fd7e14;
     text-decoration: none;
+}
+.a-link:hover {
+      color: #c84f0d;}
+.a-link:active {
+      color: #c84f0d;}
+.a-link:visited {
+      color: #c84f0d;}
+.a-link:focus {
       color: #c84f0d;}
 
 
@@ -68,6 +76,7 @@ a:focus {
     color: #fff;
     background-color: #000;
     text-transform: none;
+    font-size: 0.9rem !important;
 }
 .dropdown-item:hover{
     color: #fd7e14;
@@ -84,28 +93,17 @@ a:focus {
 .nav-link{
     text-transform: uppercase;
 }
-/*a.nav-link:hover{*/
-    /*color: #fd7e14;*/
-    /*font-weight: 600;*/
-/*}*/
-/*a.nav-link:active{*/
-    /*color: #fd7e14;*/
-/*}*/
-/*a.nav-link:focus{*/
-    /*color: #fd7e14;*/
-/*}*/
+a.nav-link:hover{
+    color: #fd7e14 !important;
+}
+a.nav-link:active{
+    color: #fd7e14 !important;
+}
+a.nav-link:focus{
+    color: #fd7e14 !important;
+}
 
 
-.caret:active{
-    color: #fd7e14;
-}
-.caret:focus{
-    color: #fd7e14;
-    font-weight: 700;
-}
-.caret:hover{
-    color: #fd7e14;
-}
 
 
 
@@ -135,14 +133,14 @@ a.top-register{
     font-size: small;
 }
 a.top-register:hover{
-    padding-left: 10pt;
     color: #fd7e14;
     text-decoration-line: underline;
 }
-
 a.top-register:active{
-    padding-left: 10pt;
     color: #fd7e14;
+}
+a.top-register:focus{
+    color: #fd7e14 !important;
 }
 
 
@@ -165,30 +163,24 @@ a.orange:hover {
 .flaticon-weightlifting-1 {  color: #fd7e14;}
 
 
-/*.icon-arrow-up{*/
-    /*!*icon-arrow-up:before*!*/
-    /*content: "\f062";*/
-    /*color: #fff;*/
-    /*font-family: 'icomoon';*/
-    /*position: absolute;*/
-/*}*/
 
-/* :: 3.7.0 ScrollUp */
+
+/*  ScrollUp */
 #scrollUp {
     background: rgba(0, 0, 0, 0.5);
-    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     border-radius: 0;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);*/
     color: #fff;
     font-size: 24px;
-    font-weight: 300;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
     text-align: center;
-    width: 40px;
+
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms; }
 #scrollUp:hover {
@@ -277,17 +269,29 @@ a.orange:hover {
 
 
 .btn.btn-outline-primary {
-    border-color: #fd7e14;
+    border-color: #fd7e14 !important;
     background: transparent;
     color: #fd7e14; }
 .btn.btn-outline-primary:hover {
     background: #fd7e14;
     color: #000; }
+.btn.btn-outline-primary:active {
+    background: #fd7e14 !important;
+    color: #000; }
+.btn.btn-outline-primary:focus {
+    background: #fd7e14;
+    color: #000; }
 .btn.btn-primary {
-    border-color: #fd7e14;
+    border-color: #fd7e14 !important;
     background: #fd7e14;
     color: #fff; }
 .btn.btn-primary:hover {
+    background: #fd7e14;
+    color: #000; }
+.btn.btn-primary:active {
+    background: #fd7e14 !important;
+    color: #000 !important; }
+.btn.btn-primary:focus {
     background: #fd7e14;
     color: #000; }
 

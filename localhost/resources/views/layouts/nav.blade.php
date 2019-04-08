@@ -23,7 +23,7 @@
             @endif
         @else
                 <a id="navbarDropdown" class="top-register" href="{{ route('privacy') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                    {{ Auth::user()->name }}<span class="caret"></span>
                 </a>
                 {{--<div class="top-register" aria-labelledby="navbarDropdown">--}}
                     <a class="top-register" href="{{ route('logout') }}"
@@ -58,7 +58,7 @@
             <ul class="navbar-nav ml-auto">
                 {{--------------about---------------}}
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Клуб</span></a>
+                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Клуб<span class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('photo') }}">{{ __('Фото галерея') }}</a>
                         <a class="dropdown-item" href="{{ route('actions') }}">{{ __('Акции') }}</a>
@@ -71,7 +71,7 @@
 
                 {{--------------programs---------------}}
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Программы</span></a>
+                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Программы<span class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('morning_programs') }}">{{ __('Утренние программы') }}</a>
                         <a class="dropdown-item" href="{{ route('body_building') }}">{{ __('Боди билдинг') }}</a>
@@ -84,7 +84,7 @@
                 </li>
                 {{--------------cards---------------}}
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Карты</span></a>
+                    <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Карты<span class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('cards_year') }}">{{ __('Год') }}</a>
                         <a class="dropdown-item" href="{{ route('cards_six_month') }}">{{ __('6 месяцев') }}</a>
@@ -94,12 +94,12 @@
                     </div>
                 </li>
                 {{--------------trainers---------------}}
-                <li class="nav-item"><a class="nav-link" href="{{ route('trainers') }}"><span class="caret">{{ __('Тренеры') }}</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('trainers') }}">{{ __('Тренеры') }}</a></li>
 
                 {{--------------shedule---------------}}
-                <li class="nav-item"><a class="nav-link" href="{{ route('shedule') }}"><span class="caret">{{ __('Расписание') }}</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('shedule') }}">{{ __('Расписание') }}</a></li>
                 {{--------------contacts---------------}}
-                <li class="nav-item"><a class="nav-link" href="{{ route('contacts') }}"><span class="caret">{{ __('Контакты') }}</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('contacts') }}">{{ __('Контакты') }}</a></li>
 
             </ul>
 
