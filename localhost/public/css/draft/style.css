@@ -7,7 +7,7 @@ body {
   font-size: 0.9rem;
 
     /*font-family: 'Montserrat-Black', sans-serif;*/
-    font-family: 'Montserrat-Black', 'Montserrat-BlackItalic', 'Montserrat-Bold', 'Montserrat-Italic', 'Montserrat-Light', 'Montserrat-Medium', 'Montserrat-Regular', sans-serif;
+    font-family: 'Montserrat-Black', 'Montserrat-BlackItalic', 'Montserrat-ExtraBold', 'Montserrat-Bold', 'Montserrat-Italic', 'Montserrat-Light', 'Montserrat-ExtraLight', 'Montserrat-Medium', 'Montserrat-Regular', 'Montserrat-Thin', sans-serif;
     /*font-family: 'M PLUS 1p', sans-serif;*/
 
     /*font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;*/
@@ -84,9 +84,16 @@ a:focus {
 }
 
 
-.site-logo {
-    font-size: x-large;
+
+
+a.site-logo {
+    font-size: 26px!important;
+    color: #000;
 }
+
+
+
+
 
 
 

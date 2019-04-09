@@ -1,16 +1,8 @@
 
-{{--<div class="site-mobile-menu">--}}
-    {{--<div class="site-mobile-menu-header">--}}
-        {{--<div class="site-mobile-menu-close mt-3">--}}
-            {{--<span class="icon-close2 js-menu-toggle"></span>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="site-mobile-menu-body"></div>--}}
-{{--</div> <!-- .site-mobile-menu -->--}}
 
 
 <div class="text-right top-line">
-    <a class="orange" href="#">8-999-876-54-32</a>
+    <a class="orange" href="8-999-876-54-32">8-999-876-54-32</a>
     <a class="top-register" href="{{ route('contacts') }}"> ул. Правды, д.1</a>
     <span class="top-register"> | </span>
     <!-- Right Side Of Navbar -->
@@ -41,8 +33,10 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
 
     <div class="container">
+            {{--<a class="navbar-brand site-logo" href="{{ url('/') }}">--}}
             <a class="navbar-brand site-logo" href="{{ url('/') }}">
                 {{--{{ config('app.name', 'SPORT') }} --}}
+                {{--<strong>S</strong>port--}}
                 <strong>S</strong>port
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"  tabindex="1">

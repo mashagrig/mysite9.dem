@@ -52,7 +52,7 @@
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
                 <small>
-                    &copy; <script>document.write(new Date().getFullYear());</script> Все права защищены <i class="icon-heart text-danger" aria-hidden="true"></i>  <a href="#" >Григорьева Мария</a>
+                    &copy; <script>document.write(new Date().getFullYear());</script> Сайт разработан <i class="icon-heart text-danger" aria-hidden="true"></i>  <a href="#" >Григорьевой Марией</a> на Laravel5
                 </small>
             </div>
         </div>
@@ -75,9 +75,17 @@
 <script src="{{ asset('js/libs/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('js/libs/aos.js') }}"></script>
-{{--<script src="{{ asset('js/libs/purify.js') }}"></script>--}}
-{{--<script src="{{ asset('js/libs/popper.min.js') }}"></script>--}}
+
+<!------------------- -->
+{{--<!--<script src="{{ asset('js/libs/purify.js') }}"></script>-->--}}
+{{--<!--<script src="{{ asset('js/libs/popper.min.js') }}"></script>-->--}}
+<!------------------- -->
+
 <script src="{{ asset('js/libs/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/libs/scrollup.js') }}"></script>
+{{--<script src="{{ asset('js/libs/jquery.jscroll.min.js') }}"></script>--}}
+
+
+{{--<script src="{{ asset('js/plugins.js') }}"></script>--}}
 
 <script src="{{ asset('js/draft/main.js') }}"></script>

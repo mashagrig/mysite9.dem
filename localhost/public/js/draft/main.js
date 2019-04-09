@@ -368,7 +368,7 @@ jQuery(document).ready(function($) {
     });
 
     // :: 4.0 ScrollUp Active Code
-    if ($.fn.scrollUp) {
+    if ($.scrollUp) {
         $(window).scrollUp({
             scrollSpeed: 250,
             // scrollText: '<i class="fa fa-angle-up"></i>'
@@ -376,5 +376,22 @@ jQuery(document).ready(function($) {
             scrollText: '<span class="icon-arrow_upward"></span>'
         });
     }
+
+   //  Scroll Active Code
+   //  if ($.jscroll) {
+   //      $(window).jscroll({
+   //
+   //         // loadingHtml: '<img src="loading.gif" alt="Loading" /> Loading...',
+   //          padding: 120,
+   //        //  nextSelector: 'a.jscroll-next:last',
+   //          //-----------------------
+   //          scrollSpeed: 250,
+   //          // scrollText: '<i class="fa fa-angle-up"></i>'
+   //         // scrollText: '<span class="icon-keyboard_arrow_up"></span>'
+   //          contentSelector: '<span class="icon-arrow_upward"></span>'
+   //      });
+   // }
+
+
 
 });
