@@ -4,11 +4,11 @@
 
     @include('sliders.slider_top', [
     'bg_1'=>'hero_b1_1.jpg',
-    'top_slider_h1_1'=>'Абонемент на 3 месяца',
-    'top_slider_test_1'=>'Время для спорта должно быть всегда',
+    'top_slider_h1_1'=>'Клубные карты',
+    'top_slider_test_1'=>'Индивидуальный подход к каждому гостю нашего клуба',
     'bg_2'=>'hero_bg_2.jpg',
-    'top_slider_h1_2'=>'Абонемент на 3 месяца',
-    'top_slider_test_2'=>'Идивидуальный подход для эффективной тренировки',
+    'top_slider_h1_2'=>'Клубные карты',
+    'top_slider_test_2'=>'Индивидуальный подход к каждому гостю нашего клуба',
     ])
 
     <p><br /></p>
@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-body text-center orange">
-                    <p>Абонемент на 3 месяца...</p>
+                    <p>Клубные карты...</p>
                 </div>
             </div>
         </div>

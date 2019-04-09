@@ -5,10 +5,10 @@
                 <p class="mb-5"><img src="{{ asset("images/img_1.jpg") }}" alt="Image" class="img-fluid"></p>
             </div>
             <div class="col-lg-5 ml-auto">
-                <h2 class="site-section-heading mb-3">The Club</h2>
-                <p>давоталдоаВ Вдлтдлтид Оавлаоиалоил ывдыьвтмвдлд Еьвама Твдаа Шаиааиаиаю . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ad, tempora incidunt accusantium. Similique magni quaerat beatae illo aliquid. Libero non ipsa nisi, corporis architecto incidunt rem repellendus asperiores numquam!</p>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit explicabo odio officiis autem minima quibusdam.</p>
-                <p><a href="#" class="btn btn-outline-primary py-2 px-4">Join Our Club</a></p>
+                <h2 class="site-section-heading mb-3">О клубе</h2>
+                <p>«SPORT» — это команда профессионалов, индивидуальный подход к каждому посетителю клуба, самые современные технологии, опыт и знания лидеров фитнес- и велнес-индустрии.</p>
+                <p class="mb-4">Мы позаботились о том, чтобы Вам было легко до нас добраться — это можно сделать как на метро, на машине и общественным транспортом. Фитнес-центр располагает бесплатными авто-, мото-, велопарковками.</p>
+                <p><a href="{{ route('contacts') }}" class="btn btn-outline-primary py-2 px-4">Контакты</a></p>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@
 
         <div class="row mb-5">
             <div class="col-md-12">
-                <h2 class="site-section-heading text-center">Testimonies</h2>
+                <h2 class="site-section-heading text-center">Лучшая тренерская команда в фитнес-клубе Sport</h2>
             </div>
         </div>
 

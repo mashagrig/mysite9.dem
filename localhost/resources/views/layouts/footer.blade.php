@@ -4,9 +4,13 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h3 class="footer-heading mb-4 text-white">О нас</h3>
-                <p>Лучшие тренеры москвы. Просторные тренажерные залы, новейшие тренажеры и качественный инвентарь. Современный подход к фитнесу.</p>
-                <p><a href="#" class="btn btn-primary rounded text-white px-4">Подробнее</a></p>
+                <h3 class="footer-heading mb-4 text-white">О фитнес-клубе SPORT</h3>
+                <p>Эффективные тренировки с лучшими тренерами москвы.<br />
+                    Просторные тренажерные залы, <br />
+                    новейшие тренажеры и <br />
+                    качественный инвентарь. <br />
+                    {{--Современный подход к фитнесу.</p>--}}
+                <p><a href="{{ route('about') }}" class="btn btn-primary rounded text-white px-4">Подробнее</a></p>
             </div>
             <div class="col-md-5 ml-auto">
                 <div class="row">
@@ -17,9 +21,7 @@
                             <li><a href="{{ route('cards') }}">{{ __('Клубные карты') }}</a></li>
                             <li><a href="{{ route('trainers') }}">{{ __('Тренеры') }}</a></li>
                             <li><a href="{{ route('shedule') }}">{{ __('Расписание') }}</a></li>
-                            <li><a href="{{ route('actions') }}">{{ __('Акции') }}</a></li>
                             <li><a href="{{ route('contacts') }}">{{ __('Контакты') }}</a></li>
-
                             <li><a href="{{ route('login') }}">{{ __('Личный кабинет') }}</a></li>
                         </ul>
                     </div>
