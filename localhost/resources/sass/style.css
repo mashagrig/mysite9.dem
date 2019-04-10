@@ -39,11 +39,7 @@ a {
       outline: none;}
 a:focus {
     text-decoration: none;
-      outline: none;
-    color: #fd7e14;}
-a:active{
-    color: #fd7e14;
-}
+      outline: none;}
 
 .a-link {
   -webkit-transition: .3s all ease;
@@ -57,7 +53,7 @@ a:active{
 .a-link:active {
       color: #c84f0d;}
 .a-link:visited {
-      color: #fd7e14;}
+      color: #c84f0d;}
 .a-link:focus {
       color: #c84f0d;}
 
@@ -108,15 +104,9 @@ a.nav-link:hover{
     color: #fd7e14 !important;
 }
 a.nav-link:active{
-    color: #fd7e14!important;
-}
-a.topic:active{
-    color: #fd7e14!important;
-}
-a.nav-link:focus{
     color: #fd7e14 !important;
 }
-a.nav-link:before {
+a.nav-link:focus{
     color: #fd7e14 !important;
 }
 
@@ -154,7 +144,7 @@ a.top-register:hover{
     text-decoration-line: underline;
 }
 a.top-register:active{
-    color: #fd7e14!important;
+    color: #fd7e14;
 }
 a.top-register:focus{
     color: #fd7e14 !important;
@@ -322,8 +312,7 @@ a.orange:hover {
   background: #000; }
 
 .form-control {
-    font-size: 0.9rem !important;
-  height: 36px; }
+  height: 47px; }
   .form-control:active, .form-control:focus {
     border-color: #fd7e14; }
   .form-control:hover, .form-control:active, .form-control:focus {
@@ -713,7 +702,7 @@ a.orange:hover {
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:   100% 100%;
+  background-position: center center;
 }
   .site-blocks-cover.overlay {
     position: relative; }
@@ -731,11 +720,6 @@ a.orange:hover {
   .site-blocks-cover.inner-page, .site-blocks-cover.inner-page .row {
     min-height: 600px;
     height: calc(40vh); }
-
-
-
-
-
   .site-blocks-cover .sub-text {
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -929,19 +913,9 @@ a.orange:hover {
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
 
-
-
 .block-13, .block-14, .block-15, .slide-one-item {
   position: relative;
   z-index: 1; }
-
-
-
-
-
-
-
-
   .block-13 .owl-nav, .block-14 .owl-nav, .block-15 .owl-nav, .slide-one-item .owl-nav {
     position: relative;
     position: absolute;

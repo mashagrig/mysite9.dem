@@ -2,13 +2,11 @@
 
 @section('content')
 
+
     @include('sliders.slider_top', [
 'bg_1'=>'hero_b1_1.jpg',
 'top_slider_h1_1'=>'Вход на сайт',
-'top_slider_test_1'=>'Больше возможностей для каждого гостя клуба',
-'bg_2'=>'hero_bg_2.jpg',
-'top_slider_h1_2'=>'Вход на сайт',
-'top_slider_test_2'=>'Узнайте об индивидуальных скидках для Вас',
+'top_slider_test_1'=>'Больше возможностей для каждого гостя клуба'
 ])
     <p><br /></p>
 <div class="container">
