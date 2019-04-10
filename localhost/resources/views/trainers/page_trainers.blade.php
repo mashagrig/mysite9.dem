@@ -10,16 +10,16 @@
     'top_slider_h1_1'=>'Тренеры',
     'top_slider_test_1'=>'Лучшая тренерская команда Москвы'
     ])
-    <p><br /></p>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-body text-center orange">
-                    <p>Тренеры...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<p><br /></p>--}}
+    {{--<div class="container">--}}
+        {{--<div class="row justify-content-center">--}}
+            {{--<div class="col-md-8">--}}
+                {{--<div class="card card-body text-center orange">--}}
+                    {{--<p>Тренеры...</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
     @include('sliders.slider_trainers')
     @include('trainers.trainer1')

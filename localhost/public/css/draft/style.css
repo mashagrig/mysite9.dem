@@ -15,7 +15,8 @@ body {
   background: #f4f4f4;
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 ::-moz-selection {
   background: #000;
@@ -204,6 +205,73 @@ a.orange:hover {
     background-color: #000;
     color: #fd7e14;
 }
+
+
+
+
+
+/*--------------------------------------------*/
+/* Blocks */
+.site-blocks-cover-one {
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.site-blocks-cover-one.overlay {
+    position: inherit; }
+    /*position: relative!important; }*/
+.site-blocks-cover-one.overlay:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4); }
+.site-blocks-cover-one, .site-blocks-cover-one .row {
+    min-height: 100px;
+    height: 100px;
+    /*height: calc(1vh * 25); */
+    }
+.site-blocks-cover-one.inner-page, .site-blocks-cover-one.inner-page .row {
+    min-height: 100px;
+    height: 100px;
+    /*height: calc(100vh - 100px);*/
+    /*height: calc(1vh * 25);*/
+
+}
+
+
+
+
+
+.site-blocks-cover-one .sub-text {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: .2em; }
+.site-blocks-cover-one h1 {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem; }
+.site-blocks-cover-one h1 strong {
+    font-weight: 600;}
+@media (min-width: 768px) {
+    .site-blocks-cover-one h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.0; } }
+.site-blocks-cover-one p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.0; }
+.site-blocks-cover-one .intro-text {
+    font-size: 12px;
+    line-height: 1.0; }
+
+
+/*--------------------------------------------*/
 
 
 
@@ -713,7 +781,7 @@ a.orange:hover {
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:   100% 100%;
+  background-position:   center center;
 }
   .site-blocks-cover.overlay {
     position: relative; }
@@ -730,7 +798,7 @@ a.orange:hover {
     height: calc(100vh); }
   .site-blocks-cover.inner-page, .site-blocks-cover.inner-page .row {
     min-height: 600px;
-    height: calc(40vh); }
+    height: calc(40vh);}
 
 
 

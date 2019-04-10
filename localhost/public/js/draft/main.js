@@ -266,7 +266,7 @@ jQuery(document).ready(function($) {
 		    margin: 0,
 		    autoplay: true,
 		    pauseOnHover: false,
-		  //  animateOut: 'fadeOut',
+		    animateOut: 'fadeOut',
     		animateIn: 'fadeIn',
 		    nav: true,
 		    navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">']
@@ -310,6 +310,18 @@ jQuery(document).ready(function($) {
 	  });
 	};
 	siteStellar();
+	// //------------------------------------------------
+	// var siteStellarOne = function() {
+	// 	$('.site-blocks-cover-one').stellar({
+	//     responsive: false,
+	//     parallaxBackgrounds: true,
+	//     parallaxElements: true,
+	//     horizontalScrolling: false,
+	//     hideDistantElements: false,
+	//     scrollProperty: 'scroll'
+	//   });
+	// };
+	// siteStellarOne();
 //-------------------------------------------
 	var siteCountDown = function() {
 
