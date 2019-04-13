@@ -41,7 +41,7 @@
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"  tabindex="1">
             {{--<span class="navbar-toggler-icon"></span>--}}
-            <span class="icon-menu h3"></span>
+            <span class="icon-menu h1"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 

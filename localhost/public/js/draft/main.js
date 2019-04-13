@@ -194,24 +194,33 @@ jQuery(document).ready(function($) {
 		if ( $('.nonloop-block-14').length > 0 ) {
 			$('.nonloop-block-14').owlCarousel({
 		    center: false,
-		    items: 1,
+		     items: 1,
 		    loop: true,
 				stagePadding: 0,
 				autoplay: true,
-		    margin: 20,
+		    margin: 0,
+		    padding: 0,
 		    nav: true,
-		    dots: true,
+		   // dots: true,
 				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
-	        600:{
-	        	margin: 20,
-	        	stagePadding: 0,
+	        0:{
 	          items: 1
 	        },
-	        1000:{
-	        	margin: 20,
-	        	stagePadding: 0,
+	        400:{
 	          items: 2
+	        },
+	        600:{
+	          items: 3
+	        },
+	        1000:{
+	          items: 4
+	        },
+	        1400:{
+	          items: 5
+	        },
+	        1600:{
+	          items: 6
 	        }
 	        
 		    }

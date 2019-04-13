@@ -31,13 +31,14 @@ const mix = require('laravel-mix');
 //         'resources/crossfits/fonts/all/Flaticon.svg',
 //         'resources/crossfits/fonts/all/Flaticon.ttf',
 //         'resources/crossfits/fonts/all/Flaticon.woff',
-//         'resources/crossfits/fonts/all/icomoon.eot',
-//         'resources/crossfits/fonts/all/icomoon.svg',
-//         'resources/crossfits/fonts/all/icomoon.ttf',
-//         'resources/crossfits/fonts/all/icomoon.woff',
-//         'resources/crossfits/fonts/all/selection.json'
+//         'resources/crossfits/fonts/all/Flaticon.woff2',
+//         // 'resources/crossfits/fonts/all/icomoon.eot',
+//         // 'resources/crossfits/fonts/all/icomoon.svg',
+//         // 'resources/crossfits/fonts/all/icomoon.ttf',
+//         // 'resources/crossfits/fonts/all/icomoon.woff',
+//         // 'resources/crossfits/fonts/all/selection.json'
 //
-//     ],  'public/css/fonts')
+//     ],  'public/css/fonts');
 //
 //     .copy([
 //         'resources/crossfits/images'
@@ -102,8 +103,6 @@ mix
 mix
     .styles(
     [
-        'resources/crossfits/fonts/all/flaticon.css',
-        'resources/crossfits/fonts/all/style.css',
          'node_modules/jquery-ui-css/jquery-ui.min.css',
         'node_modules/bootstrap/dist/css/bootstrap.css',
         'node_modules/magnific-popup/dist/magnific-popup.css',
@@ -113,8 +112,8 @@ mix
         'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
         'node_modules/animate.css/animate.min.css',
         'node_modules/aos/dist/aos.css',
-        //'resources/crossfits/css/style.css',
-        //'resources/sass/laravel.css'
+        // 'resources/crossfits/fonts/all/flaticon.css',
+        'resources/crossfits/fonts/all/style.css'
     ],
     'public/css/app.css'
 )
@@ -123,6 +122,12 @@ mix
         'public/css/draft/style.css'
     ],
     'public/css/style.css'
+)
+    .styles(
+    [
+        'public/css/draft/flaticon.css'
+    ],
+    'public/css/flaticon.css'
 );
 
 

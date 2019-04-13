@@ -8,7 +8,6 @@
 ])
     @include('about.about')
     @include('sliders.slider_programs')
-    @include('trainers.trainer1')
     @include('icon_blocks.home_blocks')
     @include('sliders.slider_trainers')
 @endsection
