@@ -72,7 +72,6 @@
                         <a class="dropdown-item" href="{{ route('stretching') }}">{{ __('Стретчинг') }}</a>
                         <a class="dropdown-item" href="{{ route('fitness') }}">{{ __('Фитнес') }}</a>
                         <a class="dropdown-item" href="{{ route('yoga') }}">{{ __('Йога') }}</a>
-                        <a class="dropdown-item" href="{{ route('pilates') }}">{{ __('Пилатес') }}</a>
                         <a class="dropdown-item" href="{{ route('child_programs') }}">{{ __('Детские программы') }}</a>
                     </div>
                 </li>

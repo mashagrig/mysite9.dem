@@ -37,7 +37,7 @@
 
     @include('sliders.slider_programs')
     @include('about.about')
-    @include('icon_blocks.home_blocks')
+    @include('icon_blocks.icon_blocks_programs')
     @include('sliders.slider_trainers')
 @endsection
 

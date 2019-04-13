@@ -8,6 +8,6 @@
 ])
     @include('about.about')
     @include('sliders.slider_programs')
-    @include('icon_blocks.home_blocks')
+    @include('icon_blocks.icon_blocks_programs')
     @include('sliders.slider_trainers')
 @endsection

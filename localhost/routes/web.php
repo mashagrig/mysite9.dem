@@ -112,27 +112,28 @@ Route::get('/home', function () {
 
 //--------- about -----------------
 Route::get('/about', 'about\AboutController@index')->name('about');
-Route::get('/photo', 'about\PhotoController@index')->name('photo');
-Route::get('/actions', 'about\ActionsController@index')->name('actions');
-Route::get('/news', 'about\NewsController@index')->name('news');
-Route::get('/partners', 'about\PartnersController@index')->name('partners');
-Route::get('/comments', 'about\CommentsController@index')->name('comments');
+Route::get('/about/photo', 'about\PhotoController@index')->name('photo');
+Route::get('/about/actions', 'about\ActionsController@index')->name('actions');
+Route::get('/about/news', 'about\NewsController@index')->name('news');
+Route::get('/about/partners', 'about\PartnersController@index')->name('partners');
+Route::get('/about/comments', 'about\CommentsController@index')->name('comments');
 
 //--------- programs -----------------
-Route::get('/morning_programs', 'programs\MorningProgramsController@index')->name('morning_programs');
-Route::get('/body_building', 'programs\BodyBuildingController@index')->name('body_building');
-Route::get('/stretching', 'programs\StretchingController@index')->name('stretching');
-Route::get('/fitness', 'programs\FitnessController@index')->name('fitness');
-Route::get('/yoga', 'programs\YogaController@index')->name('yoga');
-Route::get('/pilates', 'programs\PilatesController@index')->name('pilates');
-Route::get('/child_programs', 'programs\ChildProgramsController@index')->name('child_programs');
+Route::get('/programs', 'programs\ProgramsController@index')->name('morning_programs');
+Route::get('/programs/morning_programs', 'programs\MorningProgramsController@index')->name('morning_programs');
+Route::get('/programs/body_building', 'programs\BodyBuildingController@index')->name('body_building');
+Route::get('/programs/stretching', 'programs\StretchingController@index')->name('stretching');
+Route::get('/programs/fitness', 'programs\FitnessController@index')->name('fitness');
+Route::get('/programs/yoga', 'programs\YogaController@index')->name('yoga');
+Route::get('/programs/pilates', 'programs\PilatesController@index')->name('pilates');
+Route::get('/programs/child_programs', 'programs\ChildProgramsController@index')->name('child_programs');
 //--------- cards -----------------
 Route::get('/cards', 'cards\CardsController@index')->name('cards');
-Route::get('/cards_year', 'cards\CardsYearController@index')->name('cards_year');
-Route::get('/cards_six_month', 'cards\CardsSixMonthController@index')->name('cards_six_month');
-Route::get('/cards_three_month', 'cards\CardsThreeMonthController@index')->name('cards_three_month');
-Route::get('/cards_one_month', 'cards\CardsOneMonthController@index')->name('cards_one_month');
-Route::get('/cards_personal', 'cards\CardsPersonalController@index')->name('cards_personal');
+Route::get('/cards/cards_year', 'cards\CardsYearController@index')->name('cards_year');
+Route::get('/cards/cards_six_month', 'cards\CardsSixMonthController@index')->name('cards_six_month');
+Route::get('/cards/cards_three_month', 'cards\CardsThreeMonthController@index')->name('cards_three_month');
+Route::get('/cards/cards_one_month', 'cards\CardsOneMonthController@index')->name('cards_one_month');
+Route::get('/cards/cards_personal', 'cards\CardsPersonalController@index')->name('cards_personal');
 //--------- trainers -----------------
 Route::get('/trainers', 'trainers\TrainersController@index')->name('trainers');
 //--------- shedule -----------------

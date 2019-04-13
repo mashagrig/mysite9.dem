@@ -33,7 +33,6 @@
                             <li><a href="{{ route('stretching') }}">{{ __('Стретчинг') }}</a></li>
                             <li><a href="{{ route('fitness') }}">{{ __('Фитнес') }}</a></li>
                             <li><a href="{{ route('yoga') }}">{{ __('Йога') }}</a></li>
-                            <li><a href="{{ route('pilates') }}">{{ __('Пилатес') }}</a></li>
                             <li><a href="{{ route('child_programs') }}">{{ __('Детские программы') }}</a></li>
                         </ul>
                     </div>
