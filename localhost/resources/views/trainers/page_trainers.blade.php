@@ -12,31 +12,11 @@
     ])
 
 
-    @include('sliders.slider_trainers')
+    @include('sliders.slider_trainers', [
+        'slider_id'=>'trainers',
+        'title_page'=>'Тренеры нашего клуба',
+        'route'=>'trainers'
+        ])
     @include('trainers.trainer1')
 
-
-
-    {{--<p><br /></p>--}}
-    {{--<div class="container">--}}
-        {{--<div class="row justify-content-center">--}}
-            {{--<div class="col-md-8">--}}
-                {{--<div class="card card-body text-left orange">--}}
-                    {{--<p>Тренеры...</p>--}}
-
-                    {{--<p>{{ $trainers_roles_id }}</p>--}}
-                    {{--@foreach($trainers_info as $trainers)--}}
-                        {{--<h5>{{ $trainers->personalinfos_name }}</h5>--}}
-                        {{--<p>{{ $trainers->roles_title }}</p>--}}
-                        {{--<p>{{ $trainers->users_email }}</p>--}}
-                        {{--<p>{{ $trainers->users_id }}</p>--}}
-                        {{--<p>{{ $trainers->users_name }}</p>--}}
-                        {{--<p>{{ $trainers->binaryfiles_file_src }}</p>--}}
-                        {{--<p>{{ $trainers->personalinfos_info }}</p>--}}
-                    {{--@endforeach--}}
-                    {{--<pre>{{ print_r($trainers_info) }}</pre>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
 @endsection

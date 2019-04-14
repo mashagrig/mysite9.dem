@@ -3,7 +3,7 @@
 
 $arr = array();
 for ($i=1; $i< 7; $i++)  {
-    $arr['file'][$i] = 'img_'.$i.'.jpg' ;
+    $arr['file'][$i] = "images/img_".$i.".jpg" ;
 }
 
 $arr['title'] = [

@@ -25,8 +25,8 @@
                                 <div class="media-image-body">
                                     <h2>{{ $title }}</h2>
                                     <p>{{ $text }}</p>
-                                    {{--<p><a href="{{ route("{$link}") }}" class="btn btn-primary text-white px-4">--}}
-                                            {{--<span class="caption">Подробнее</span></a></p>--}}
+                                    <p><a href="{{ route("{$link}") }}" class="btn btn-primary text-white px-4">
+                                     <span class="caption">Подробнее</span></a></p>
                                 </div>
                             </div>
 
