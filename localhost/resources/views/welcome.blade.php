@@ -13,7 +13,7 @@
 'top_slider_h1_3'=>'Цели достижимы',
 'top_slider_test_3'=>'Мы помогаем Вам на пути к успеху',
 ])
-                @include('sliders.slider_programs')
+                @include('sliders.slider_photo_gallery')
                 @include('about.about')
                 @include('icon_blocks.icon_blocks_programs')
                 @include('sliders.slider_trainers')

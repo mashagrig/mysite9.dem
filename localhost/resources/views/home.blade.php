@@ -35,7 +35,7 @@
 
     ])
 
-    @include('sliders.slider_programs')
+    @include('sliders.slider_photo_gallery')
     @include('about.about')
     @include('icon_blocks.icon_blocks_programs')
     @include('sliders.slider_trainers')

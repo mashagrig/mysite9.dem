@@ -54,6 +54,7 @@
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown " class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Клуб<span class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('about') }}">{{ __('О нас') }}</a>
                         <a class="dropdown-item" href="{{ route('photo') }}">{{ __('Фото галерея') }}</a>
                         <a class="dropdown-item" href="{{ route('actions') }}">{{ __('Акции') }}</a>
                         <a class="dropdown-item" href="{{ route('news') }}">{{ __('Новости') }}</a>

@@ -1,4 +1,4 @@
-<div class="site-section">
+<div id="about" class="site-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

@@ -7,7 +7,9 @@
     'top_slider_h1_1'=>'Фото-галерея',
     'top_slider_test_1'=>'Вам надо увидеть все своими глазами'
     ])
+    @include('sliders.slider_photo_gallery')
     <p><br /></p>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
