@@ -57,8 +57,7 @@
                         <a class="dropdown-item" href="{{ route('about') }}">{{ __('О нас') }}</a>
                         <a class="dropdown-item" href="{{ route('photo') }}">{{ __('Фото галерея') }}</a>
                         <a class="dropdown-item" href="{{ route('actions') }}">{{ __('Акции') }}</a>
-                        <a class="dropdown-item" href="{{ route('news') }}">{{ __('Новости') }}</a>
-                        <a class="dropdown-item" href="{{ route('partners') }}">{{ __('Пратнеры') }}</a>
+                        <a class="dropdown-item" href="{{ route('partners') }}">{{ __('Партнеры') }}</a>
                         <a class="dropdown-item" href="{{ route('comments') }}">{{ __('Отзывы') }}</a>
                     </div>
                 </li>

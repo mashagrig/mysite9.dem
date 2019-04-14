@@ -3,7 +3,7 @@
 
 
 <div id="about" class="site-section">
-    <div class="container">
+    <div class="container"><p><br /></p>
         <div class="row">
             <div class="col-lg-6">
                 <p class="mb-5"><img src="{{ asset("images/img_1.jpg") }}" alt="Image" class="img-fluid"></p>

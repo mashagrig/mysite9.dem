@@ -1,10 +1,4 @@
-{{--<div class="site-section block-14 bg-light nav-direction-white" style=" padding: 20px 0px!important;">--}}
-{{--<div class="container">--}}
-{{--<div class="row mb-5" style="  padding-bottom: 0px!important;">--}}
-{{--<div class="col-md-12">--}}
-{{--<h3 class="site-section-heading text-center">Лучшая тренерская команда в фитнес-клубе Sport</h3>--}}
-{{--</div>--}}
-{{--</div>--}}
+
 
 <div id="{{ $slider_id }}" class="site-section  block-14 bg-light nav-direction-white">
     <div class="container">
