@@ -170,15 +170,20 @@ jQuery(document).ready(function($) {
 		    dots: true,
 				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
-	        600:{
+	        0:{
 	        	margin: 20,
 	        	stagePadding: 0,
 	          items: 1
 	        },
-	        1000:{
+	        600:{
 	        	margin: 20,
 	        	stagePadding: 0,
 	          items: 2
+	        },
+	        1000:{
+	        	margin: 20,
+	        	stagePadding: 0,
+	          items: 3
 	        },
 	        1200:{
 	        	margin: 20,

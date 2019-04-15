@@ -113,11 +113,11 @@ Route::get('/home', function () {
 //--------- about -----------------
 Route::get('/about', 'about\AboutController@index')->name('about');
 Route::get('/about#about', 'about\AboutController@index')->name('about');
-Route::get('/about#slider_photo_gallery', 'about\AboutController@index')->name('photo');
+Route::get('/about#photo_gallery', 'about\AboutController@index')->name('photo');
 Route::get('/about#actions', 'about\AboutController@index')->name('actions');
-Route::get('/about#news', 'about\AboutController@index')->name('news');
 Route::get('/about#partners', 'about\AboutController@index')->name('partners');
 Route::get('/about#comments', 'about\AboutController@index')->name('comments');
+
 //Route::get('/about/photo', 'about\PhotoController@index')->name('photo');
 //Route::get('/about/actions', 'about\ActionsController@index')->name('actions');
 //Route::get('/about/news', 'about\NewsController@index')->name('news');
@@ -140,6 +140,7 @@ Route::get('/cards#cards_six_month', 'cards\CardsSixMonthController@index')->nam
 Route::get('/cards#cards_three_month', 'cards\CardsThreeMonthController@index')->name('cards_three_month');
 Route::get('/cards#cards_one_month', 'cards\CardsOneMonthController@index')->name('cards_one_month');
 Route::get('/cards#cards_personal', 'cards\CardsPersonalController@index')->name('cards_personal');
+Route::get('/cards#cards_child', 'cards\CardsPersonalController@index')->name('cards_child');
 //--------- trainers -----------------
 Route::get('/trainers', 'trainers\TrainersController@index')->name('trainers');
 //--------- shedule -----------------

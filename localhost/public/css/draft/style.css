@@ -63,13 +63,16 @@ a:active{
     text-decoration: none;
 }
 .a-link:hover {
-      color: #c84f0d;}
+      /*color: #c84f0d;}*/
+      color: #000;
+text-decoration-line: underline;
+}
 .a-link:active {
-      color: #c84f0d;}
+      color: #000;}
 .a-link:visited {
       color: #fd7e14;}
 .a-link:focus {
-      color: #c84f0d;}
+      color: #000;}
 
 
 /*Оранжевый текст - ссылка*/

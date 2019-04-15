@@ -7,12 +7,8 @@
     'top_slider_test_1'=>'Присоединяйтесь к нашей команде',
 ])
     @include('about.about')
-    @include('about.photo_gallery')
+    @include('about.for_slider_photo_gallery')
     @include('about.actions')
-    @include('about.partners')
-    @include('sliders.slider_comments', [
-        'slider_id'=>'comments',
-        'title_page'=>'Отзывы гостей нашего клуба',
-        'route'=>'comments'
-        ])
+    @include('about.for_icon_partners')
+    @include('about.for_slider_comments')
 @endsection

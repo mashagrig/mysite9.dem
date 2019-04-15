@@ -12,11 +12,7 @@
     ])
 
 
-    @include('sliders.slider_trainers', [
-        'slider_id'=>'trainers',
-        'title_page'=>'Тренеры нашего клуба',
-        'route'=>'trainers'
-        ])
-    @include('trainers.trainer1')
+    @include('trainers.for_slider_trainers')
+    @include('trainers.each_trainer')
 
 @endsection

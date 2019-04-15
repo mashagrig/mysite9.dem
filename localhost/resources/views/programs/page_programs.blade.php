@@ -8,14 +8,10 @@
     'top_slider_h1_1'=>'Программы тренировок',
     'top_slider_test_1'=>'Идивидуальный подход для эффективной тренировки'
     ])
-    <p><br /></p>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-body text-center orange">
-                    <p>Программы тренировок...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    @include('programs.for_icon_programs')
+    @include('programs.for_each_program')
+
+
+
 @endsection

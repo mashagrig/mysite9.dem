@@ -10,15 +10,14 @@
                 <div class="nonloop-block-13 owl-carousel">
 
 
-                    @foreach($arr as $ki=>$vi)
-                        @foreach($vi as $k=>$v)
+                    @foreach($arr as $k=>$v)
 
-                            <?php
-                            $file = $arr['file'][$k];
-                            $title = $arr['title'][$k];
-                            $text = $arr['text'][$k];
-                            $link = $arr['link'][$k];
-                            ?>
+                        <?php
+                        $file = $arr[$k]['file'];
+                        $title = $arr[$k]['title'];
+                        $text = $arr[$k]['text'];
+                        $link = $arr[$k]['link'];
+                        ?>
 
                             <div class="media-image">
                                 <img src="{{ asset("{$file}") }}" alt="Image" class="img-fluid">
@@ -31,7 +30,6 @@
                             </div>
 
 
-                        @endforeach
                     @endforeach
 
 

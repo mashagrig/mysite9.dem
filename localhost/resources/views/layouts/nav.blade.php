@@ -84,6 +84,7 @@
                         <a class="dropdown-item" href="{{ route('cards_three_month') }}">{{ __('3 месяца') }}</a>
                         <a class="dropdown-item" href="{{ route('cards_one_month') }}">{{ __('1 месяц') }}</a>
                         <a class="dropdown-item" href="{{ route('cards_personal') }}">{{ __('Персональные') }}</a>
+                        <a class="dropdown-item" href="{{ route('cards_child') }}">{{ __('Детские') }}</a>
                     </div>
                 </li>
                 {{--------------trainers---------------}}
