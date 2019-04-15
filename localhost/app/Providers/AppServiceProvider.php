@@ -6,6 +6,7 @@ use App\Comment;
 use App\Guest;
 use App\Http\Controllers\trainers\TrainersController;
 use App\Personalinfo;
+use App\Trainingshedule;
 use App\User;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -98,6 +99,74 @@ class AppServiceProvider extends ServiceProvider
                 ->join('subscriptions', 'subscriptions.id', '=', 'guests.subscription_id', 'inner')
                 ->where('roles.title', 'like', '%guest%')
                 ->get());
+
+
+
+         view()->share('shedule_all',
+            $shedule_all = Trainingshedule::select(
+                'trainingshedules.date_training as date_training',
+                'trainingtimes.start_training as start_training',
+                'trainingtimes.stop_training as stop_training',
+                'trainingshedules.id as users_id',
+                'personalinfos.name as personalinfos_name',
+                'trainingshedules.section_id as section_id',
+                'trainingshedules.gym_id as gym_id'
+            )
+                ->join('users', function ($join) {
+                    $join->on('users.id', '=', 'trainingshedules.user_id');
+                })
+                ->join('personalinfos', function ($join) {
+                    $join->on('personalinfos.id', '=', 'users.personalinfo_id');
+                })
+                ->join('roles', function ($join) {
+                    $join->on('roles.id', '=', 'users.role_id');
+                })
+                ->join('trainingtimes', function ($join) {
+                    $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
+                })
+                ->join('sections', function ($join) {
+                    $join->on('sections.id', '=', 'trainingshedules.section_id');
+                })
+                ->join('gyms', function ($join) {
+                    $join->on('gyms.id', '=', 'trainingshedules.gym_id');
+                })
+
+                ->where('roles.title', 'like', '%trainer%')
+                ->get());
+
+
+
+         view()->share('shedule_dates',
+            $shedule_dates = Trainingshedule::select(
+                'trainingshedules.date_training as date_training'
+            )
+                ->join('users', function ($join) {
+                    $join->on('users.id', '=', 'trainingshedules.user_id');
+                })
+                ->join('roles', function ($join) {
+                    $join->on('roles.id', '=', 'users.role_id');
+                })
+                ->join('trainingtimes', function ($join) {
+                    $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
+                })
+                ->join('sections', function ($join) {
+                    $join->on('sections.id', '=', 'trainingshedules.section_id');
+                })
+                ->join('gyms', function ($join) {
+                    $join->on('gyms.id', '=', 'trainingshedules.gym_id');
+                })
+
+                ->where('roles.title', 'like', '%trainer%')
+                ->groupby('trainingshedules.date_training')
+                ->distinct()
+                ->get()
+
+         );
+
+
+
+
+
 
 //        View::composers('*', function ($view){
 //            $trainers_info = Personalinfo::select(

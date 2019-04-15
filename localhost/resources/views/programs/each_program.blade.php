@@ -21,6 +21,13 @@
             <div class="col-lg-5 ml-auto">
                 <h2 class="site-section-heading mb-3">{{ $title }}</h2>
                 <p class="mb-4">{{ $text }}</p>
+
+                {{--<div class="trainers-small mb-5 d-flex">--}}
+                    {{--<div><img src="images/person_1.jpg" alt="Image" class="rounded-circle trainer first" data-toggle="tooltip" data-placement="top" title="Craig David"></div>--}}
+                    {{--<div><img src="images/person_2.jpg" alt="Image" class="rounded-circle trainer" data-toggle="tooltip" data-placement="top" title="James Creen"></div>--}}
+                    {{--<div><img src="images/person_3.jpg" alt="Image" class="rounded-circle trainer" data-toggle="tooltip" data-placement="top" title="Ben Smith"></div>--}}
+                {{--</div>--}}
+
                 <p><a href="{{ route('contacts') }}" class="btn btn-outline-primary py-2 px-4">Записаться</a></p>
             </div>
         </div>
