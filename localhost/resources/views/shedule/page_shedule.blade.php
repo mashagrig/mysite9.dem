@@ -14,6 +14,7 @@
         'program_select' => $program_select,
             'trainers_select' => $trainers_select,
                         'shedule_for_date' => $shedule_for_date,
+                        'period_select' => $period_select,
 
     ])
 @endsection

@@ -18,9 +18,10 @@
                         <label class="mr-sm-2" for="period">Показать расписание на период:</label><br/>
                         <select id="period" name="period">
                             <option  value="" hidden></option>
-                            <option value="today">Сегодня</option>
-                            <option value="week">На неделю</option>
-                            <option value="month">На месяц</option>
+                            <option value="today"  @if($period_select === "today")  selected @endif>Сегодня</option>
+                            <option value="week"  @if($period_select === "week")  selected @endif>На неделю</option>
+                            <option value="month"  @if($period_select === "month")  selected @endif>На месяц</option>
+
                             {{--<option value="week" @if($program_select === "week")  selected @endif>На неделю</option>--}}
                             {{--<option value="week" {{ old('period') === "week" ? 'selected' : '' }}>На неделю</option>--}}
                             {{--<option value="day">Точная дата</option>--}}
@@ -44,13 +45,13 @@
                         <label class="mr-sm-2" for="programs">Выберете программу:</label><br/>
                         <select id="programs" name="programs">
                             <option value="" hidden></option>
-                            <option value="">Все программы</option>
-                            <option value="morning_programs">Утренние программы</option>
-                            <option value="body_building">Боди билдинг</option>
-                            <option value="stretching">Стретчинг</option>
-                            <option value="fitness">Фитнес</option>
-                            <option value="yoga">Йога</option>
-                            <option value="child_programs">Детсткие программы</option>
+                            <option value="" @if($program_select === "")  selected @endif>Все программы</option>
+                            <option value="morning_programs" @if($program_select === "morning_programs")  selected @endif>Утренние программы</option>
+                            <option value="body_building" @if($program_select === "body_building")  selected @endif>Боди билдинг</option>
+                            <option value="stretching" @if($program_select === "stretching")  selected @endif>Стретчинг</option>
+                            <option value="fitness" @if($program_select === "fitness")  selected @endif>Фитнес</option>
+                            <option value="yoga" @if($program_select === "yoga")  selected @endif>Йога</option>
+                            <option value="child_programs" @if($program_select === "child_programs")  selected @endif>Детсткие программы</option>
                         </select>
                     </div>
 
@@ -81,7 +82,7 @@
         {{--{{print_r($program_select)}}--}}
         {{--{{print_r($trainers_select)}}--}}
 
-        {{ print_r(old('programs') ) }}
+        {{--{{ print_r(old('programs') ) }}--}}
         {{--{{print_r($shedule_for_date)}}--}}
 
 

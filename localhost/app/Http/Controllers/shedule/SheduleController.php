@@ -21,11 +21,13 @@ class SheduleController extends Controller
         $program_select = '';
         $trainers_select ='';
         $shedule_for_date ='';
+        $period_select ='';
         return view('shedule.page_shedule', [
             'max_date_select' => $max_date_select,
             'program_select' => $program_select,
             'trainers_select' => $trainers_select,
             'shedule_for_date' => $shedule_for_date,
+            'period_select' => $period_select,
         ]);
     }
 
@@ -51,6 +53,8 @@ class SheduleController extends Controller
         $program_select = '';
         $trainers_select ='';
         $shedule_for_date ='';
+        $period_select ='';
+
 
         $today = date('Y-m-d');
         $date = new DateTime(date('Y-m-d'));
@@ -59,6 +63,8 @@ class SheduleController extends Controller
 
         if(isset($request->period))
         {
+            $period_select = $request->period;
+
             switch ( $request->period) {
                 case "today":
                     $max_date_select = date("Y-m-d");
@@ -152,6 +158,7 @@ class SheduleController extends Controller
             'program_select' => $program_select,
             'trainers_select' => $trainers_select,
             'shedule_for_date' => $shedule_for_date,
+            'period_select' => $period_select,
         ]);
     }
 
