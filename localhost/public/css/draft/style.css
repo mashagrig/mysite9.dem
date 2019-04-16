@@ -499,7 +499,9 @@ a.nav-link:before {
 
 
 
+
 .btn.btn-outline-primary {
+    font-size: 0.8rem !important;
     border-color: #fd7e14 !important;
     background: transparent;
     color: #fd7e14; }
@@ -512,13 +514,15 @@ a.nav-link:before {
 .btn.btn-outline-primary:focus {
     background: #fd7e14;
     color: #000; }
+
 .btn.btn-primary {
+    font-size: 0.8rem !important;
     border-color: #fd7e14 !important;
     background: #fd7e14;
     color: #fff; }
 .btn.btn-primary:hover {
     background: #fd7e14;
-    color: #000; }
+    color: #000!important; }
 .btn.btn-primary:active {
     background: #fd7e14 !important;
     color: #000 !important; }
