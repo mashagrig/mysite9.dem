@@ -8,8 +8,18 @@
 
         <div class="row">
             <form method='POST' action="{{ action('shedule\SheduleController@store') }}" class="row">
-                <input name="_token" type="hidden" value="{{ csrf_token() }}">
+                {{--<input name="_token" type="hidden" value="{{ csrf_token() }}">--}}
+                {{ csrf_field() }}
 
+                {{--@foreach($equipment as $equip)--}}
+                    {{--<option value="{{ $equip->id }}"--}}
+                            {{--@if( in_array($equip->id, old('equipments', $arr)) )--}}
+                            {{--selected--}}
+                        {{--@endif--}}
+                    {{-->--}}
+                        {{--{{ $equip->equip_name }}--}}
+                    {{--</option>--}}
+                {{--@endforeach--}}
 
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
@@ -25,7 +35,7 @@
                 </div>
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
-                        <label class="mr-sm-2" for="period">Выберете программу:</label><br/>
+                        <label class="mr-sm-2" for="programs">Выберете программу:</label><br/>
                         <select id="programs" name="programs">
                             <option value="programs" selected disabled>---</option>
                             <option value="morning_programs">Утренние программы</option>
@@ -41,14 +51,16 @@
 
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
-                        <label class="mr-sm-2" for="period">Выберете тренера:</label><br/>
+                        <label class="mr-sm-2" for="trainers">Выберете тренера:</label><br/>
                         <select id="trainers" name="trainers">
                             <option value="trainers" selected disabled>---</option>
                             <option value="trainer1">Петров</option>
+                            <option value="trainer2">Иванов</option>
+                            <option value="trainer3">Сидоров</option>
                         </select>
                     </div>
                 </div>
-            </form>
+
 
             <div class="col align-items-end">
                 <div class=" bg-white  mb-3 align-items-end">
@@ -56,9 +68,22 @@
                     <input type="submit" class="btn btn-primary rounded text-white px-4" value="Показать">
                 </div>
             </div>
-
+            </form>
         </div>
-        {{--{{print_r($max_date_select)}}--}}
+        {{print_r($max_date_select)}}
+        {{print_r($program_select)}}
+        {{print_r($trainers_select)}}
+        {{--{{print_r($shedule_for_date)}}--}}
+
+
+        {{--@foreach($shedule_for_date as $shedule)--}}
+        {{--{{print_r($shedule)}}--}}
+        {{--@endforeach--}}
+
+
+
+
+
         <div class="row">
 
             @include('shedule.shedule_table')

@@ -164,7 +164,32 @@ class AppServiceProvider extends ServiceProvider
          );
 
 
-
+//        view()->share('shedule_for_date',
+//            $shedule_for_date = Trainingshedule::select(
+//                'trainingshedules.date_training as date_training'
+//            )
+//                ->join('users', function ($join) {
+//                    $join->on('users.id', '=', 'trainingshedules.user_id');
+//                })
+//                ->join('roles', function ($join) {
+//                    $join->on('roles.id', '=', 'users.role_id');
+//                })
+//                ->join('trainingtimes', function ($join) {
+//                    $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
+//                })
+//                ->join('sections', function ($join) {
+//                    $join->on('sections.id', '=', 'trainingshedules.section_id');
+//                })
+//                ->join('gyms', function ($join) {
+//                    $join->on('gyms.id', '=', 'trainingshedules.gym_id');
+//                })
+//
+//                ->where('roles.title', 'like', '%trainer%')
+//                ->groupby('trainingshedules.date_training')
+//                ->distinct()
+//                ->where('trainingshedules.date_training', 'like', '%trainer%')
+//                ->get()
+//        );
 
 
 

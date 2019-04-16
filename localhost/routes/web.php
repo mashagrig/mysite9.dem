@@ -145,7 +145,7 @@ Route::get('/cards#cards_child', 'cards\CardsPersonalController@index')->name('c
 Route::get('/trainers', 'trainers\TrainersController@index')->name('trainers');
 //--------- shedule -----------------
 Route::get('/shedule', 'shedule\SheduleController@index')->name('shedule');
-Route::post('/shedule', 'shedule\SheduleController@show')->name('shedule_show');
+Route::post('/shedule/', 'shedule\SheduleController@show')->name('shedule_show');
 Route::post('/shedule', 'shedule\SheduleController@store')->name('shedule_store');
 
 
