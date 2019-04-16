@@ -26,15 +26,6 @@
                             {{--<option value="week" {{ old('period') === "week" ? 'selected' : '' }}>На неделю</option>--}}
                             {{--<option value="day">Точная дата</option>--}}
 
-                            {{--@foreach($equipment as $equip)--}}
-                            {{--<option value="{{ $equip->id }}"--}}
-                            {{--@if( in_array($equip->id, old('equipments', $arr)) )--}}
-                            {{--selected--}}
-                            {{--@endif--}}
-                            {{-->--}}
-                            {{--{{ $equip->equip_name }}--}}
-                            {{--</option>--}}
-                            {{--@endforeach--}}
 
                         </select>
                     </div>
@@ -57,14 +48,46 @@
 
                 </div>
 
+
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="trainers">Выберете тренера:</label><br/>
                         <select id="trainers" name="trainers">
                             <option value="" hidden></option>
-                            <option value="trainer1">Петров</option>
-                            <option value="trainer2">Иванов</option>
-                            <option value="trainer3">Сидоров</option>
+
+                            @if(isset($shedule_for_date) && $shedule_for_date!=='')
+
+                                <?php
+                                $shedule_for_date_u =  $shedule_for_date->unique('trainer_id')
+                                ?>
+
+
+                                @foreach($shedule_for_date_u as $shedule)
+                                <option value="{{ $shedule->trainer_id }}">
+                                    {{ $shedule->trainer_name }}
+                                </option>
+
+                                @endforeach
+                            @endif
+
+                            {{--<option value="{{ $shedule->trainer_id }}"--}}
+                            {{--@if($trainers_select === "{$shedule->trainer_id }")  selected @endif>--}}
+                            {{--{{ $shedule->trainer_name }}--}}
+                            {{--</option>--}}
+
+
+                            {{--@if(isset($all_programs_trainers_id))--}}
+                                {{--@foreach($all_programs_trainers_id as $trainer_name=>$trainer_id)--}}
+                                {{--<option value="{{ $trainer_id }}">{{ $trainer_name }}</option>--}}
+                                {{--@endforeach--}}
+                            {{--@endif--}}
+                            {{--@if(isset($all_body_building_trainers_id))--}}
+
+                                {{--@foreach($all_body_building_trainers_id as $trainer_name=>$trainer_id)--}}
+                                    {{--<option value="{{ $trainer_id }}">{{ $trainer_name }}</option>--}}
+                                {{--@endforeach--}}
+                            {{--@endif--}}
+
                         </select>
                     </div>
                 </div>
@@ -78,81 +101,9 @@
             </div>
             </form>
         </div>
-        {{--{{print_r($max_date_select)}}--}}
-        {{--{{print_r($program_select)}}--}}
-        {{--{{print_r($trainers_select)}}--}}
-
-        {{--{{ print_r(old('programs') ) }}--}}
-        {{--{{print_r($shedule_for_date)}}--}}
-
-
-        {{--@foreach($shedule_for_date as $shedule)--}}
-        {{--{{print_r($shedule)}}--}}
-        {{--@endforeach--}}
-
-
-
-
-
         <div class="row">
-
             @include('shedule.shedule_table')
-
-            {{--<div id="slider-range"></div>--}}
-
-            {{--<aside class="widget shop-filter">--}}
-            {{--<h3 class="sidebar-title">price</h3>--}}
-            {{--<div class="info_widget">--}}
-            {{--<div class="price_filter">--}}
-            {{--<div id="slider-range"></div>--}}
-            {{--<div class="price_slider_amount">--}}
-            {{--<input type="text" id="amount" name="price"  placeholder="Add Your Price" />--}}
-            {{--<input type="submit"  value="Filter"/>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</aside>--}}
-
-
-
-
-
-            {{--<table class="table table-striped">--}}
-            {{--<thead class="text-black thead-dark">--}}
-            {{--<tr>--}}
-            {{--<th scope="col">Дата</th>--}}
-            {{--<th scope="col">Время</th>--}}
-            {{--<th scope="col">Тренер</th>--}}
-            {{--<th scope="col">№ зала</th>--}}
-            {{--</tr>--}}
-            {{--</thead>--}}
-            {{--<tbody>--}}
-            {{--<tr>--}}
-            {{--<td>01.01.2019</td>--}}
-            {{--<td>12-00 / 14-00</td>--}}
-            {{--<td>Иванов</td>--}}
-            {{--<td>101</td>--}}
-            {{--</tr>--}}
-            {{--<tr>--}}
-            {{--<td>01.01.2019</td>--}}
-            {{--<td>18-00 / 20-00</td>--}}
-            {{--<td>120</td>--}}
-            {{--<td>120</td>--}}
-            {{--</tr>--}}
-            {{--<tr>--}}
-            {{--<td>01.01.2019</td>--}}
-            {{--<td>22-00 / 24-00</td>--}}
-            {{--<td>230</td>--}}
-            {{--<td>230</td>--}}
-            {{--</tr>--}}
-            {{--</tbody>--}}
-            {{--</table>--}}
-
         </div>
-
-
     </div> {{-- container--}}
-
-
 </div>
 </div>

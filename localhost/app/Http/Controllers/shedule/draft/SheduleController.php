@@ -22,7 +22,6 @@ class SheduleController extends Controller
         $trainers_select ='';
         $shedule_for_date ='';
         $period_select ='';
-
         return view('shedule.page_shedule', [
             'max_date_select' => $max_date_select,
             'program_select' => $program_select,
@@ -55,6 +54,7 @@ class SheduleController extends Controller
         $trainers_select ='';
         $shedule_for_date ='';
         $period_select ='';
+
 
         $today = date('Y-m-d');
         $date = new DateTime(date('Y-m-d'));
@@ -99,8 +99,8 @@ class SheduleController extends Controller
                 'trainingshedules.date_training as date_training',
                 'trainingtimes.start_training as start_training',
                 'trainingtimes.stop_training as stop_training',
-                'trainingshedules.user_id as trainer_id',
-                'personalinfos.name as trainer_name',
+                'trainingshedules.user_id as user_id',
+                'personalinfos.name as personalinfos_name',
                 'trainingshedules.section_id as section_id',
                 'sections.title as section_title',
                 'trainingshedules.gym_id as gym_id'
@@ -132,15 +132,12 @@ class SheduleController extends Controller
 //                    )
 //                ;
 //            })
+
                 ->where('roles.title', 'like', '%trainer%')
                 // ->groupby('trainingshedules.date_training')
                 ->where('trainingshedules.date_training', '<=', "{$max_date_select}")
                 ->where('trainingshedules.date_training', '>=', "{$today}")
-               // ->where('sections.title', 'like', "%{$program_select}%")
                 ->where('sections.title', 'like', "%{$program_select}%")
-                ->where('users.id', 'like', "%{$trainers_select}%")//id
-               // ->where('trainingshedules.user_id', 'like', "%{$trainers_select}%")//id
-
                 ->oldest('date_training')
                 ->oldest('start_training')
                 ->get();
@@ -152,11 +149,10 @@ class SheduleController extends Controller
                 ->toArray();
 
             //тренеры
-//            $all_morning_programs_trainers_id = $shedule_for_date
-//                ->unique('trainer_id')
-//                ->where('sections.title', 'like', "%morning_programs%")
-//                ->pluck('trainer_id','trainer_name')
-//                ->toArray();
+            $all_fitness_trainers_id = $shedule_for_date
+                ->where('sections.title', 'like', "%fitness%")
+                ->pluck(['trainingshedules.user_id', 'personalinfos.name'])
+                ->toArray();
 
 
 
