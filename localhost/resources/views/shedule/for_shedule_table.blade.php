@@ -11,33 +11,40 @@
                 {{--<input name="_token" type="hidden" value="{{ csrf_token() }}">--}}
                 {{ csrf_field() }}
 
-                {{--@foreach($equipment as $equip)--}}
-                    {{--<option value="{{ $equip->id }}"--}}
-                            {{--@if( in_array($equip->id, old('equipments', $arr)) )--}}
-                            {{--selected--}}
-                        {{--@endif--}}
-                    {{-->--}}
-                        {{--{{ $equip->equip_name }}--}}
-                    {{--</option>--}}
-                {{--@endforeach--}}
+
 
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="period">Показать расписание на период:</label><br/>
                         <select id="period" name="period">
-                            <option value="period" selected disabled>---</option>
+                            <option  value="" hidden></option>
                             <option value="today">Сегодня</option>
-                            <option value="tomorrow">Завтра</option>
                             <option value="week">На неделю</option>
+                            <option value="month">На месяц</option>
+                            {{--<option value="week" @if($program_select === "week")  selected @endif>На неделю</option>--}}
+                            {{--<option value="week" {{ old('period') === "week" ? 'selected' : '' }}>На неделю</option>--}}
                             {{--<option value="day">Точная дата</option>--}}
+
+                            {{--@foreach($equipment as $equip)--}}
+                            {{--<option value="{{ $equip->id }}"--}}
+                            {{--@if( in_array($equip->id, old('equipments', $arr)) )--}}
+                            {{--selected--}}
+                            {{--@endif--}}
+                            {{-->--}}
+                            {{--{{ $equip->equip_name }}--}}
+                            {{--</option>--}}
+                            {{--@endforeach--}}
+
                         </select>
                     </div>
                 </div>
+
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="programs">Выберете программу:</label><br/>
                         <select id="programs" name="programs">
-                            <option value="programs" selected disabled>---</option>
+                            <option value="" hidden></option>
+                            <option value="">Все программы</option>
                             <option value="morning_programs">Утренние программы</option>
                             <option value="body_building">Боди билдинг</option>
                             <option value="stretching">Стретчинг</option>
@@ -53,7 +60,7 @@
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="trainers">Выберете тренера:</label><br/>
                         <select id="trainers" name="trainers">
-                            <option value="trainers" selected disabled>---</option>
+                            <option value="" hidden></option>
                             <option value="trainer1">Петров</option>
                             <option value="trainer2">Иванов</option>
                             <option value="trainer3">Сидоров</option>
@@ -70,9 +77,11 @@
             </div>
             </form>
         </div>
-        {{print_r($max_date_select)}}
-        {{print_r($program_select)}}
-        {{print_r($trainers_select)}}
+        {{--{{print_r($max_date_select)}}--}}
+        {{--{{print_r($program_select)}}--}}
+        {{--{{print_r($trainers_select)}}--}}
+
+        {{ print_r(old('programs') ) }}
         {{--{{print_r($shedule_for_date)}}--}}
 
 
