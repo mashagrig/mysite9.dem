@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Guest;
 use App\Singup;
 use App\Trainingshedule;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -51,6 +52,7 @@ class SingupController extends Controller
         $max_date_select = array();
         $each_check_shedule_info = array();
 
+        //определяем поьзоватея (в роли гостя)
         $current_user = Auth::user()->getAuthIdentifier();
 
         $current_guest = Guest::select('guests.id')
@@ -61,7 +63,7 @@ class SingupController extends Controller
             ->get('id')[0]->id;
 
 
-
+        //для всех выбранных позиций в расписании
         if (isset($request->check_shedule_id) && (!empty($request->check_shedule_id))) {
             $check_shedule_id = $request->check_shedule_id;
 
@@ -103,8 +105,13 @@ class SingupController extends Controller
                             $join->on('roles.id', '=', 'users.role_id');
                         })
 //                        ->join('guests', function ($join) {
-//                            $join->on('guests.user_id', '=', 'users.id');
+//                            $join->on('guests.user_id', '=','users.id'  );
 //                        })
+//                        ->join('guests', function ($join) {
+//                            $join->on('users.id', '=', 'guests.user_id');
+//                            //  ->where('guests.user_id', '>', 5);
+//                        })
+
 
                         ->join('trainingtimes', function ($join) {
                             $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
@@ -115,16 +122,19 @@ class SingupController extends Controller
                         ->join('gyms', function ($join) {
                             $join->on('gyms.id', '=', 'trainingshedules.gym_id');
                         })
-//                        ->join('singups', function ($join) {
-//                            $join->on('singups.trainingshedule_id', '=', 'trainingshedules.id');
-//                        })
+                        ->join('singups', function ($join) use($current_guest) {
+                            $join->on('singups.trainingshedule_id', '=', 'trainingshedules.id')
+                                ->where('singups.guest_id', '=', "{$current_guest}");
+                        })
 
                         ->where('trainingshedules.id', '=', "{$id}")
-                     //   ->where('singups.guest_id', '=', "{$current_user}")
-                     //   ->where('users.id', '=', "{$current_user}")
+                     //   ->where('singups.guest_id', '=', "{$current_guest}")
+                      //  ->where('users.id', '=', "{$current_user}")
+
                         ->oldest('date_training')
                         ->oldest('start_training')
                         ->get()
+                        ->unique('trainingshedules.id')
                 );
 
             }
