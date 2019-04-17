@@ -26,7 +26,6 @@
                             {{--<option value="week" {{ old('period') === "week" ? 'selected' : '' }}>На неделю</option>--}}
                             {{--<option value="day">Точная дата</option>--}}
 
-
                         </select>
                     </div>
                 </div>
@@ -34,7 +33,14 @@
                 <div class="col-md-auto toolbar-form bg-white  mb-3">
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="programs">Выберете программу:</label><br/>
-                        <select id="programs" name="programs">
+                        <select id="programs" name="programs"
+                                {{--onchange="function f() {--}}
+                           {{--$('#trainers option').prop('selected', false);--}}
+                            {{--$('#trainers option:eq(1)').prop('selected',true)--}}
+                    {{--//    $('#trainers option[value=]').prop('selected', true);--}}
+                     {{--//   $('#trainers option:contains('Все тренеры')').prop('selected', true);--}}
+                        {{--}"--}}
+                        >
                             <option value="" hidden></option>
                             <option value="" @if($program_select === "")  selected @endif>Все программы</option>
                             <option value="morning_programs" @if($program_select === "morning_programs")  selected @endif>Утренние программы</option>
@@ -53,7 +59,9 @@
                     <div class="tolbar-select">
                         <label class="mr-sm-2" for="trainers">Выберете тренера:</label><br/>
                         <select id="trainers" name="trainers">
-                            <option value="" hidden></option>
+                            <option hidden></option>
+                            <option value="" selected>Все тренеры</option>
+                            {{--<option value="" @if($trainers_select === "")  selected @endif>Все тренеры</option>--}}
 
                             @if(isset($shedule_for_date) && $shedule_for_date!=='')
 
@@ -61,20 +69,19 @@
                                 $shedule_for_date_u =  $shedule_for_date->unique('trainer_id')
                                 ?>
 
+                                    @foreach($shedule_for_date_u as $shedule)
 
-                                @foreach($shedule_for_date_u as $shedule)
+                                    {{--<option value="{{ $shedule->trainer_id }}"--}}
+                                    {{--@if($trainers_select === "{$shedule->trainer_id }")  selected @endif>--}}
+                                    {{--{{ $shedule->trainer_name }}--}}
+                                    {{--</option>--}}
+
                                 <option value="{{ $shedule->trainer_id }}">
                                     {{ $shedule->trainer_name }}
                                 </option>
 
                                 @endforeach
                             @endif
-
-                            {{--<option value="{{ $shedule->trainer_id }}"--}}
-                            {{--@if($trainers_select === "{$shedule->trainer_id }")  selected @endif>--}}
-                            {{--{{ $shedule->trainer_name }}--}}
-                            {{--</option>--}}
-
 
                             {{--@if(isset($all_programs_trainers_id))--}}
                                 {{--@foreach($all_programs_trainers_id as $trainer_name=>$trainer_id)--}}
@@ -93,17 +100,22 @@
                 </div>
 
 
-            <div class="col align-items-end">
-                <div class=" bg-white  mb-3 align-items-end">
+            <div class="col  text-md-right bg-white  mb-3">
+                {{--<div class="text-md-right">--}}
                     <br/>
                     <input type="submit" class="btn btn-primary rounded text-white px-4" value="Показать">
-                </div>
+                {{--</div>--}}
             </div>
             </form>
         </div>
         <div class="row">
-            @include('shedule.shedule_table')
+            <div class="col">
+                    @include('shedule.shedule_table')
+
+            </div>
         </div>
+
+
     </div> {{-- container--}}
 </div>
 </div>

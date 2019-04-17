@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Trainingshedule;
 use Illuminate\Http\Request;
 
 class SingupController extends Controller
@@ -13,7 +14,16 @@ class SingupController extends Controller
      */
     public function index()
     {
-        //
+        $check_shedule_id = '';
+        $max_date_select = '';
+        $each_check_shedule_info = array();
+
+
+        return view('privacy', [
+            'check_shedule_id'=>$check_shedule_id,
+            'max_date_select' => $max_date_select,
+            'each_check_shedule_info' => $each_check_shedule_info,
+        ]);
     }
 
     /**
@@ -34,7 +44,89 @@ class SingupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $check_shedule_id = '';
+        $max_date_select = '';
+        $each_check_shedule_info = array();
+
+
+        if(isset($request->check_shedule_id) && (!empty($request->check_shedule_id)))
+        {
+            $check_shedule_id = $request->check_shedule_id;
+
+            foreach ($check_shedule_id as $k=>$id){
+
+                array_push ( $each_check_shedule_info ,
+                 Trainingshedule::select(
+                    'trainingshedules.id as shedule_id',
+                    'trainingshedules.date_training as date_training',
+                    'trainingtimes.start_training as start_training',
+                    'trainingtimes.stop_training as stop_training',
+                    'trainingshedules.user_id as trainer_id',
+                    'personalinfos.name as trainer_name',
+                    'trainingshedules.section_id as section_id',
+                    'sections.title as section_title',
+                    'trainingshedules.gym_id as gym_id'
+                )
+                    ->join('users', function ($join) {
+                        $join->on('users.id', '=', 'trainingshedules.user_id');
+                    })
+                    ->join('personalinfos', function ($join) {
+                        $join->on('personalinfos.id', '=', 'users.personalinfo_id');
+                    })
+                    ->join('roles', function ($join) {
+                        $join->on('roles.id', '=', 'users.role_id');
+                    })
+                    ->join('trainingtimes', function ($join) {
+                        $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
+                    })
+
+                    ->join('sections', function ($join) {
+                        $join->on("sections.id", '=', 'trainingshedules.section_id');
+                    })
+                    ->join('gyms', function ($join) {
+                        $join->on('gyms.id', '=', 'trainingshedules.gym_id');
+                    })
+
+
+                    ->where('trainingshedules.id', '=', "{$id}")
+
+                    ->oldest('date_training')
+                    ->oldest('start_training')
+                    ->get()
+                    );
+
+//                $max_date_select = $each_check_shedule_info
+//                    ->unique('date_training')
+//                    ->pluck('date_training')
+//                    ->toArray();
+
+
+
+//            foreach ($check_shedule_id as $k=>$id){
+//
+////                $each_check_shedule_info = $info
+////                    ->where('trainingshedules.id', '=', "{$id}");
+//
+//                   // ->where('trainingshedules.id', '=', "{$id}")
+//                   // ->unique('shedule_id')
+//                  //  ->pluck('id')
+//                   // ->toArray();
+
+
+
+            }
+        }
+
+
+
+        return view('privacy', [
+            'check_shedule_id'=>$check_shedule_id,
+            'max_date_select' => $max_date_select,
+            'each_check_shedule_info' => $each_check_shedule_info,
+        ]);
+//       return redirect()->action('shedule\SheduleController@index', [
+//           'check_shedule_id'=>$check_shedule_id
+//       ]);
     }
 
     /**

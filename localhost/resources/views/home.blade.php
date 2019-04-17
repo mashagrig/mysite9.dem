@@ -3,24 +3,24 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body text-center orange">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        <span class="orange text-uppercase">Вы успешно авторизованы</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{--<div class="container">--}}
+        {{--<div class="row justify-content-center">--}}
+            {{--<div class="col-md-8">--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body text-center orange">--}}
+                        {{--@if (session('status'))--}}
+                            {{--<div class="alert alert-success" role="alert">--}}
+                                {{--{{ session('status') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
+                        {{--<span class="orange text-uppercase">Вы успешно авторизованы</span>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
-    <p><br /></p>
+    {{--<p><br /></p>--}}
 
     @include('sliders.slider_top_three', [
     'bg_1'=>'hero_b1_1.jpg',

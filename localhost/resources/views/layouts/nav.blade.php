@@ -14,7 +14,8 @@
                     <a class="top-register" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
             @endif
         @else
-                <a id="navbarDropdown" class="top-register" href="{{ route('privacy') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{--<a id="navbarDropdown" class="top-register" href="{{ route('privacy') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+                <a id="navbarDropdown" class="top-register" href="{{ route('privacy') }}" role="button">
                     {{ Auth::user()->name }}<span class="caret"></span>
                 </a>
                 {{--<div class="top-register" aria-labelledby="navbarDropdown">--}}

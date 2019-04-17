@@ -11,16 +11,37 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //Auth::routes();
 \Illuminate\Support\Facades\Auth::routes(['verify' => true]);
 //создаст набор маршрутов
+
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/home', function () {
+    return view('home');
+});
+//Route::get('/home', 'HomeController@index')->name('home');
+
+//--------- privacy -----------------
+//--------- singup -----------------
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->middleware('auth');
+Route::get('/privacy', 'SingupController@index')->name('privacy')->middleware('auth');
+//POST запрос аутентификации на сайте
+Route::post('/privacy', 'SingupController@store')->middleware('auth');
+Route::post('/privacy/update', 'SingupController@update')->middleware('auth');
+
+
+
 
 //--------- menu -----------------
 
@@ -49,11 +70,6 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 //Route::get('/logout', 'HomeController@index')->name('logout');
-
-//--------- privacy????? -----------------
-Route::get('/privacy', 'HomeController@index')->name('privacy');
-//Route::get('/admin', 'HomeController@index')->name('admin');
-//Route::get('/content', 'HomeController@index')->name('content');
 
 //--------- sendResetLinkEmail -----------------
 ////POST запрос для отправки email письма пользователю для сброса пароля
@@ -105,10 +121,7 @@ Route::get('/register/refresh_captcha', 'Auth\RegisterController@refreshCaptcha'
 
 
 //--------- menu -----------------
-Route::get('/home', function () {
-    return view('home');
-});
-//Route::get('/home', 'HomeController@index')->name('home');
+
 
 //--------- about -----------------
 Route::get('/about', 'about\AboutController@index')->name('about');
@@ -145,8 +158,10 @@ Route::get('/cards#cards_child', 'cards\CardsPersonalController@index')->name('c
 Route::get('/trainers', 'trainers\TrainersController@index')->name('trainers');
 //--------- shedule -----------------
 Route::get('/shedule', 'shedule\SheduleController@index')->name('shedule');
-Route::post('/shedule/', 'shedule\SheduleController@show')->name('shedule_show');
-Route::post('/shedule', 'shedule\SheduleController@store')->name('shedule_store');
+Route::post('/shedule', 'shedule\SheduleController@index');
+Route::post('/shedule/', 'shedule\SheduleController@show');
+Route::post('/shedule', 'shedule\SheduleController@store');
+
 
 
 //--------- contacts -----------------

@@ -36,7 +36,15 @@ h2, h3, h4, h5,
 
 }
 
-
+select option:hover{
+    background-color: #fd7e14!important;
+}
+select option:active{
+    background: #fd7e14;
+}
+select option:focus{
+    background: #fd7e14;
+}
 
 a {
   -webkit-transition: .3s all ease;

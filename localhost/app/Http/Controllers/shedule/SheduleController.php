@@ -22,6 +22,7 @@ class SheduleController extends Controller
         $trainers_select ='';
         $shedule_for_date ='';
         $period_select ='';
+        $check_shedule_id ='';
 
         return view('shedule.page_shedule', [
             'max_date_select' => $max_date_select,
@@ -29,6 +30,7 @@ class SheduleController extends Controller
             'trainers_select' => $trainers_select,
             'shedule_for_date' => $shedule_for_date,
             'period_select' => $period_select,
+            'check_shedule_id'=>$check_shedule_id
         ]);
     }
 
@@ -55,6 +57,7 @@ class SheduleController extends Controller
         $trainers_select ='';
         $shedule_for_date ='';
         $period_select ='';
+        $check_shedule_id ='';
 
         $today = date('Y-m-d');
         $date = new DateTime(date('Y-m-d'));
@@ -96,6 +99,7 @@ class SheduleController extends Controller
             //только если выбран период для фильтра расписания!!!
 
             $shedule_for_date =Trainingshedule::select(
+                'trainingshedules.id as shedule_id',
                 'trainingshedules.date_training as date_training',
                 'trainingtimes.start_training as start_training',
                 'trainingtimes.stop_training as stop_training',
@@ -163,12 +167,18 @@ class SheduleController extends Controller
         }
 
 
+        if(isset($request->check_shedule_id) && (!empty($request->check_shedule_id)))
+        {
+            $check_shedule_id = $request->check_shedule_id;
+        }
+
         return view('shedule.page_shedule', [
             'max_date_select' => $max_date_select,
             'program_select' => $program_select,
             'trainers_select' => $trainers_select,
             'shedule_for_date' => $shedule_for_date,
             'period_select' => $period_select,
+            'check_shedule_id'=>$check_shedule_id
         ]);
     }
 
