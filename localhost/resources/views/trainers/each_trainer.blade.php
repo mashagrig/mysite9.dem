@@ -14,7 +14,7 @@
                 <img src="{{ asset("{$trainers->binaryfiles_file_src}") }}" alt="Trainer" class="img-fluid rounded-circle w-25 mb-4">
                 <h2 class="h5 mb-4 text-white">{{ $trainers->personalinfos_name }}</h2>
                 <p class="text-white mb-5 lead">{{ $trainers->personalinfos_info }}</p>
-                <p><a href="#" class="btn btn-primary text-white">Забронировать тренировку</a></p>
+                <p><a href="{{ route("shedule") }}" class="btn btn-primary text-white">Записаться на тренировку</a></p>
             </div>
         </div>
     </div>

@@ -75,11 +75,14 @@ class AppServiceProvider extends ServiceProvider
             )
                 ->join('personalinfos', 'personalinfos.id', '=', 'users.personalinfo_id', 'inner')
                 ->join('roles', 'roles.id', '=', 'users.role_id', 'inner')
+
                 ->join('guests', function ($join) {
                     $join->on('users.id', '=', 'guests.user_id');
-                    //  ->where('guests.user_id', '>', 5);
                 })
-                ->join('comments', 'guest_id', '=', 'guests.id', 'inner')
+                ->join('comments', function ($join) {
+                    $join->on('comments.guest_id', '=', 'guests.id');
+                })
+              //  ->join('comments', 'guest_id', '=', 'guests.id', 'inner')
                 ->join('contents', function ($join) {
                     $join->on('users.id', '=', 'contents.user_id');
                 })
@@ -96,7 +99,7 @@ class AppServiceProvider extends ServiceProvider
 //                         ->join('binaryfiles', 'binaryfiles.id', '=', 'contents.binaryfile_id', 'inner')
 //                            ->join('singups', 'guest_id', '=', 'guests.id', 'inner')
 
-                ->join('subscriptions', 'subscriptions.id', '=', 'guests.subscription_id', 'inner')
+              //  ->join('subscriptions', 'subscriptions.id', '=', 'guests.subscription_id', 'inner')
                 ->where('roles.title', 'like', '%guest%')
                 ->get());
 

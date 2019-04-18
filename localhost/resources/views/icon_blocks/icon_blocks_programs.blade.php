@@ -31,7 +31,7 @@
                                 <p><a class="a-link" href="{{ route("programs") }}#{{ $link }}">Подробнее</a></p>
                             </div>
                             <div class="col">
-                                <p><a class="a-link" href="{{ route("programs") }}#{{ $link }}">Записаться</a></p>
+                                <p><a class="a-link" href="{{ route("shedule") }}">Записаться</a></p>
                             </div>
                         </div>
                     </div>

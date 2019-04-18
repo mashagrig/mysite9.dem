@@ -32,7 +32,7 @@
 
                                         {{--Для каждой уникальной даты из расписания создаем таблицу--}}
                                         @foreach($max_date_select as $k =>$date)
-                                            {{--{{ print_r($max_date_select) }}--}}
+                                            {{--{{ var_export($max_date_select) }}--}}
                                             <?php
                                             //  $format_date =  date_format(date_create($date), 'd-m-Y');
                                             setlocale(LC_TIME, 'ru_RU.utf8');
@@ -129,7 +129,7 @@
                                     </form>
                             @endauth
 
-
+                            <p>В ближайшее время наш менеджер свяжется с Вами для подтверждения записи.</p>
                         @endif
                     @endif
                     {{--------------------------------------------------}}
