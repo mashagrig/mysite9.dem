@@ -23,6 +23,84 @@ class SingupController extends Controller
         $each_check_shedule_info = array();
 
 
+
+        //--------------------------------------------------------
+
+        //определяем поьзоватея (в роли гостя)
+        $current_user = Auth::user()->getAuthIdentifier();
+
+        $current_guest = Guest::select('guests.id')
+            ->join('users', function ($join) {
+                $join->on('users.id', '=', 'guests.user_id');
+            })
+            ->where('users.id', '=', "{$current_user}")
+            ->get('id')[0]->id;
+
+        $today = date("Y-m-d");
+        $max_date = date('Y-m-d', time() + 86400*31);
+
+       // Singup::select('guest_id')->where('guest_id', '=', "{$current_guest}")->count();
+
+        array_push($each_check_shedule_info,
+            Trainingshedule::select(
+            'trainingshedules.id as shedule_id',
+            'trainingshedules.date_training as date_training',
+            'trainingtimes.start_training as start_training',
+            'trainingtimes.stop_training as stop_training',
+            'trainingshedules.user_id as trainer_id',
+            'personalinfos.name as trainer_name',
+            'trainingshedules.section_id as section_id',
+            'sections.title as section_title',
+            'trainingshedules.gym_id as gym_id'
+        )
+            ->join('users', function ($join) {
+                $join->on('users.id', '=', 'trainingshedules.user_id');
+            })
+            ->join('personalinfos', function ($join) {
+                $join->on('personalinfos.id', '=', 'users.personalinfo_id');
+            })
+            ->join('roles', function ($join) {
+                $join->on('roles.id', '=', 'users.role_id');
+            })
+            ->join('trainingtimes', function ($join) {
+                $join->on('trainingtimes.id', '=', 'trainingshedules.trainingtime_id');
+            })
+
+            ->join('sections', function ($join) {
+                $join->on("sections.id", '=', 'trainingshedules.section_id');
+            })
+            ->join('gyms', function ($join) {
+                $join->on('gyms.id', '=', 'trainingshedules.gym_id');
+            })
+            ->join('singups', function ($join) use($current_guest) {
+                $join->on('singups.trainingshedule_id', '=', 'trainingshedules.id')
+                    ->where('singups.guest_id', '=', "{$current_guest}");
+            })
+            ->where('roles.title', 'like', '%trainer%')
+            ->where('trainingshedules.date_training', '<=', "{$max_date}")
+            ->where('trainingshedules.date_training', '>=', "{$today}")
+           // ->where('users.id', 'like', "%{$current_guest}%")//id
+           ->where('guest_id', '=', "{$current_guest}")
+            ->groupby('shedule_id')
+            ->oldest('date_training')
+            ->oldest('start_training')
+            ->get()
+        );
+
+
+        foreach ($each_check_shedule_info as $kk => $singup) {
+
+            foreach ($singup as $k => $v) {
+
+                array_push(
+                    $max_date_select,
+                    $singup[$k]['date_training']);
+            }
+        }
+        $max_date_select = array_unique($max_date_select);
+        //--------------------------------------------------------
+
+
         return view('privacy', [
             'check_shedule_id' => $check_shedule_id,
             'max_date_select' => $max_date_select,
@@ -70,7 +148,7 @@ class SingupController extends Controller
             foreach ($check_shedule_id as $k => $id) {
 
                 //запись в базу запрошенных тренировок на пользователя
-                $insert_in_singups = Singup::create([
+                $query_in_singups = Singup::create([
                     'guest_id' => $current_guest,
                     'trainingshedule_id' => $id
                 ]);
@@ -155,11 +233,13 @@ class SingupController extends Controller
 //            array_unique( array_column($each_check_shedule_info, 'date_training')) )  ;
 
 
-        return view('privacy', [
-            'check_shedule_id' => $check_shedule_id,
-            'max_date_select' => $max_date_select,
-            'each_check_shedule_info' => $each_check_shedule_info,
-        ]);
+//        return view('privacy', [
+//            'check_shedule_id' => $check_shedule_id,
+//            'max_date_select' => $max_date_select,
+//            'each_check_shedule_info' => $each_check_shedule_info,
+//        ]);
+
+        return redirect()->action('SingupController@index');
 //       return redirect()->action('shedule\SheduleController@index', [
 //           'check_shedule_id'=>$check_shedule_id
 //       ]);
@@ -205,8 +285,23 @@ class SingupController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+
+        //check_shedule_id[0]=923&check_shedule_id[1]=926&check_shedule_id[2]=928
+
+        //для всех выбранных позиций в расписании
+        if (isset($request->check_shedule_id) && (!empty($request->check_shedule_id))) {
+            $check_shedule_id = $request->check_shedule_id;
+
+            foreach ($check_shedule_id as $k => $id) {
+
+                //удаление из базы запрошенных тренировок на пользователя
+                Singup::where('trainingshedule_id', '=', "{$id}")->delete();
+
+            }}
+        return redirect()->action('SingupController@index');
+
+
     }
 }

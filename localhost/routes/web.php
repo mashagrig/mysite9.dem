@@ -38,7 +38,8 @@ Route::get('/privacy', function () {
 Route::get('/privacy', 'SingupController@index')->name('privacy')->middleware('auth');
 //POST запрос аутентификации на сайте
 Route::post('/privacy', 'SingupController@store')->middleware('auth');
-Route::post('/privacy/update', 'SingupController@update')->middleware('auth');
+Route::post('/privacy/{id}/update', 'SingupController@update')->middleware('auth');
+Route::post('/privacy/destroy', 'SingupController@destroy')->middleware('auth');
 
 
 

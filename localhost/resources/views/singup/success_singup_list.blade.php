@@ -1,4 +1,4 @@
-@if(isset($check_shedule_id) && $check_shedule_id!=='')
+@if(isset($each_check_shedule_info) && $each_check_shedule_info!=='')
 
     <div class="site-section  block-14 bg-light nav-direction-white">
         <div class="container">
@@ -24,7 +24,7 @@
                             @auth
                                 {{--<form method='POST' action="{{ action('shedule\SheduleController@store') }}"--}}
                                       {{--class="row">--}}
-                                    <form method='POST' action="{{ action('SingupController@update') }}" class="row">
+                                    <form method='POST' action="{{ action('SingupController@destroy') }}" class="row">
                                         @csrf
                                         <?php $format_date = '';?>
                                         @endauth
