@@ -147,11 +147,21 @@ class SingupController extends Controller
 
             foreach ($check_shedule_id as $k => $id) {
 
-                //запись в базу запрошенных тренировок на пользователя
-                $query_in_singups = Singup::create([
-                    'guest_id' => $current_guest,
-                    'trainingshedule_id' => $id
-                ]);
+              $training_arr =  Singup::
+                select('trainingshedule_id')
+                    ->where('guest_id', '=', "{$current_guest}")
+                    ->pluck('trainingshedule_id')
+                    ->toArray();
+
+              if(!in_array( $id, $training_arr)){
+//запись в базу запрошенных тренировок на пользователя
+              $query_in_singups = Singup::create([
+                  'guest_id' => $current_guest,
+                  'trainingshedule_id' => $id
+              ]);
+              }
+
+
 
 
 
